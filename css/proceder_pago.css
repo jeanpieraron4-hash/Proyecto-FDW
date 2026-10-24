@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #efefef; 
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.navbar {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-icon { font-size: 20px; cursor: pointer; display: none; }
+.logo { font-size: 24px; font-weight: bold; letter-spacing: 2px; color: #ffffff; }
+.menu { list-style: none; }
+.menu li { display: inline-block; margin: 0 12px; }
+.menu li a { color: #ffffff; text-decoration: none; font-size: 14px;}
+.menu li a:hover { color: #aaaaaa; }
+.acciones-navbar { display: flex; align-items: center; }
+.acciones-navbar input { padding: 6px 10px; border-radius: 2px; border: none; font-size: 13px; outline: none;}
+.icono { font-size: 16px; margin-left: 15px; cursor: pointer; }
+
+
+.seccion-checkout {
+    flex: 1; 
+    max-width: 1200px; 
+    margin: 50px auto; 
+    padding: 0 20px;
+    width: 100%;
+}
+
+.seccion-checkout h1 {
+    font-size: 28px;
+    color: #111111;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #111111;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.contenedor-columnas {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px; 
+}
+
+
+.columna-formulario {
+    flex: 2; 
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+}
+
+.bloque-formulario {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 30px; 
+}
+
+.bloque-formulario h2 {
+    font-size: 16px;
+    color: #111111;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+
+.input-texto {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    font-size: 14px;
+    outline: none;
+}
+
+.fila-inputs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.input-mitad {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    font-size: 14px;
+    outline: none;
+}
+
+
+.opciones-radio {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.radio-label input {
+    cursor: pointer;
+}
+
+
+.caja-tarjeta {
+    background-color: #f9f9f9; 
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+}
+
+.btn-confirmar {
+    width: 100%;
+    padding: 20px;
+    background-color: #111111;
+    color: #ffffff;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-confirmar:hover {
+    background-color: #333333;
+}
+
+
+.columna-resumen {
+    flex: 1; 
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 40px 30px; 
+    height: max-content; 
+    position: sticky;
+    top: 20px;
+}
+
+.columna-resumen h2 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #111111;
+}
+
+.mini-productos p {
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+.fila-resumen {
+    display: flex;
+    justify-content: space-between; 
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: #333333;
+}
+
+.linea {
+    border: none;
+    border-top: 1px solid #cccccc;
+    margin: 25px 0;
+}
+
+.fila-resumen.total {
+    font-size: 20px;
+    font-weight: bold;
+    color: #111111;
+}
+
+.texto-seguro {
+    text-align: center;
+    font-size: 12px;
+    color: #888888;
+    margin-top: 20px;
+}
+
+
+.pie-pagina {
+    background-color: #e5e5e5; 
+    padding: 30px 60px;
+    border-top: 1px solid #cccccc;
+    width: 100%;
+}
+
+.footer-logo h2 { 
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #333333; 
+    margin-bottom: 15px;
+}
+
+.footer-inferior {
+    text-align: left; 
+}
+
+.texto-copyright { 
+    font-size: 12px; 
+    color: #111111; 
+    line-height: 1.5;
+}

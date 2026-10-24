@@ -1,141 +1,290 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 body {
-    font-family: Arial;
-    background-color: #ffffff;
-    color: #333333;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #E5E5E5;
+    color: #1A1A1A;
 }
 
-.navbar {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    padding: 15px 30px;
+.page-container {
+    width: 100%;
+    margin: 0;
+    background-color: #E5E5E5;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #2B2B2B;
+    color: #FFFFFF;
+    padding: 12px 32px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    border-bottom: 1px solid #444;
+    width: 100%;
+}
+
+.header-content {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    gap: 16px;
 }
 
-.menu-icon {
-    font-size: 20px;
-    cursor: pointer;
-    display: none;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+.logo span {
+    font-size: 1.25rem;
+    font-weight: 900;
     letter-spacing: 2px;
-    color: #ffffff;
+    cursor: pointer;
 }
 
-.menu {
-    list-style: none;
+.nav-desktop {
+    display: flex;
+    gap: 32px;
 }
 
-.menu li {
-    display: inline-block;
-    margin: 0 12px;
-}
-
-.menu li a {
-    color: #ffffff;
+.nav-desktop a, .nav-mobile a {
+    color: #FFFFFF;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: color 0.2s ease;
 }
 
-.menu li a:hover {
-    color: #e60023;
-    text-decoration: underline;
+.nav-desktop a:hover, .nav-mobile a:hover {
+    color: #CCCCCC;
 }
 
-.acciones-navbar {
+.header-actions {
     display: flex;
     align-items: center;
+    gap: 16px;
 }
 
-.acciones-navbar input {
-    padding: 6px 10px;
+.search-box {
+    position: relative;
+}
+
+.search-box input {
+    background-color: #FFFFFF;
+    color: #1A1A1A;
+    font-size: 0.75rem;
+    padding: 6px 14px;
+    width: 220px;
+    border: 1px solid #A0A0A0;
     border-radius: 4px;
-    border: 1px solid #ccc;
     outline: none;
 }
 
-.icono {
-    font-size: 14px;
-    margin-left: 15px;
-    cursor: pointer;
+.icon-btn {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: opacity 0.2s;
 }
 
-.quienes-somos {
+.icon-btn:hover {
+    opacity: 0.8;
+}
+
+.nav-mobile {
+    display: none;
+    justify-content: space-between;
+    padding-top: 8px;
+    margin-top: 8px;
+    border-top: 1px solid #444;
+}
+
+.main-content {
+    width: 100%;
+    padding: 0 32px 48px 32px;
+}
+
+.section {
+    padding-top: 32px;
+    width: 100%;
+}
+
+.text-center {
     text-align: center;
-    padding: 40px 20px;
-    max-width: 1100px;
+}
+
+.section-title {
+    font-size: 1.85rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.about-text {
+    max-width: 900px;
+    margin: 0 auto 32px auto;
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.section-subtitle {
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.section-desc {
+    font-size: 0.8rem;
+    color: #555;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.btn-more {
+    display: inline-block;
+    border: 1px solid #666;
+    background-color: #FFFFFF;
+    padding: 6px 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #1A1A1A;
+    text-decoration: none;
+    margin-bottom: 32px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.btn-more:hover {
+    background-color: #E0E0E0;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid #CCC;
+    width: 100%;
+    margin: 36px 0;
+}
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    width: 100%;
     margin: 0 auto;
 }
-
-.quienes-somos h1 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    color: #111;
-}
-
-.quienes-somos p {
-    max-width: 850px;
-    margin: 0 auto 40px auto;
-    line-height: 1.6;
-    color: #555;
-    font-size: 15px;
-}
-
-.galeria-somos {
+.card-wrapper {
     display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
-
-.item-somos {
-    width: 260px;
-    text-align: center;
-}
-
-.imagen-placeholder {
+.card-bg {
+    background-color: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    border-radius: 12px;
     width: 100%;
-    height: 320px;
-    background: #e8e8e8;
-    color: #333;
-    border-radius: 4px;
-    border: 1px solid #d0d0d0;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 15px;
-    font-weight: 500;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    padding: 20px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
-.imagen-placeholder:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    background-color: #dfdfdf;
+.card-bg:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
 }
-
-.titulo-item {
-    margin-top: 15px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #222;
+.hero-card {
+    height: 440px;
 }
-
-.imagen-placeholder img {
+.product-card {
+    height: 380px;
+}
+.card-bg img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 4px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+.product-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 4px;
+}
+.font-italic {
+    font-style: italic;
+}
+.product-price {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.btn-action {
+    border: 1px solid #1A1A1A;
+    background-color: #F3F4F6;
+    color: #1A1A1A;
+    padding: 6px 16px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-action:hover {
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+}
+
+footer {
+    margin-top: 80px;
+    padding: 40px 50px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+.logo-pie-pagina {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+footer p {
+    font-size: 14px;
+    color: #666;
+}
+
+.enlaces-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.enlaces-footer a {
+    color: #555;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.enlaces-footer a:hover {
+    text-decoration: underline;
 }

@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #efefef; 
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- BARRA DE NAVEGACIÓN --- */
+.navbar {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-icon { font-size: 20px; cursor: pointer; display: none; }
+.logo { font-size: 24px; font-weight: bold; letter-spacing: 2px; color: #ffffff; }
+.menu { list-style: none; }
+.menu li { display: inline-block; margin: 0 12px; }
+.menu li a { color: #ffffff; text-decoration: none; font-size: 14px;}
+.menu li a:hover { color: #aaaaaa; }
+.acciones-navbar { display: flex; align-items: center; }
+.acciones-navbar input { padding: 6px 10px; border-radius: 2px; border: none; font-size: 13px; outline: none;}
+.icono { font-size: 16px; margin-left: 15px; cursor: pointer; color: #ffffff; text-decoration: none; }
+
+/* --- SECCIÓN DE CONFIRMACIÓN --- */
+.seccion-confirmacion {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+/* Estilo de Ticket / Recibo de compra */
+.caja-ticket {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    width: 100%;
+    max-width: 500px; 
+    padding: 50px 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.caja-ticket h1 {
+    font-size: 24px;
+    color: #111111;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.numero-orden {
+    font-size: 14px;
+    color: #666666;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.linea-ticket {
+    border: none;
+    border-top: 2px dashed #cccccc; 
+    margin: 0 0 30px 0;
+}
+
+.mensaje-gracias {
+    font-size: 15px;
+    color: #444444;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.detalles-rapidos {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 40px;
+    border: 1px solid #eeeeee;
+}
+
+.detalles-rapidos p {
+    font-size: 13px;
+    color: #111111;
+    margin: 5px 0;
+    letter-spacing: 1px;
+}
+
+.btn-volver {
+    display: inline-block;
+    width: 100%;
+    padding: 18px;
+    background-color: #111111;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: background-color 0.3s;
+}
+
+.btn-volver:hover {
+    background-color: #333333;
+}
+
+/* --- PIE DE PÁGINA --- */
+.pie-pagina {
+    background-color: #e5e5e5; 
+    padding: 30px 60px;
+    border-top: 1px solid #cccccc;
+    width: 100%;
+}
+
+.footer-logo h2 { 
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #333333; 
+    margin-bottom: 15px;
+}
+
+.footer-inferior {
+    text-align: left; 
+}
+
+.texto-copyright { 
+    font-size: 12px; 
+    color: #111111; 
+    line-height: 1.5;
+}

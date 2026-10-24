@@ -3,60 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GLOX3R</title>
-    <link rel="stylesheet" href="css/portada.css">
-    
+    <title>GLOX3R - Tienda Urbana</title>
+    <link rel="stylesheet" href="CSS/portada.css">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="menu-icon">☰</div>
-        <div class="logo">GLOX3R</div>
-
-        <ul class="menu">
-            <li><a href="#">Hombre</a></li>
-            <li><a href="#">Mujer</a></li>
-            <li><a href="#">Accesorios</a></li>
-            <li><a href="#">Novedades</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-
-        <div class="acciones-navbar">
-            <input type="text" placeholder="Buscar en GLOX3R">
-            <span class="icono">Carrito</span>
-            <span class="icono">Mi cuenta</span>
-        </div>
-    </header>
-
-    <section class="quienes-somos">
-        <h1>¿QUIÉNES SOMOS?</h1>
-        <p>
-            Somos una marca de moda urbana joven diseñada para el día a día. Nos enfocamos en ofrecerte prendas de alta calidad, cortes perfectos y la comodidad que necesitas para adueñarte de la calle a tu propio ritmo.
-        </p>
-
-        <div class="galeria-somos">
-            <div class="item-somos">
-                <div class="imagen-placeholder">
-                    <img src="https://i.pinimg.com/1200x/8b/e1/3b/8be13b108be6d3af8d5c5e57bac8a38c.jpg" alt="Polo Boxy Fit">
+    <div class="page-container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <span>≡ GLOX3R</span>
                 </div>
-                <p class="titulo-item">Polo Boxy Fit</p>
-            </div>
-            
-            <div class="item-somos">
-                <div class="imagen-placeholder">
-                    <img src="https://i.pinimg.com/1200x/c0/69/69/c06969d2e5cc76b1574f771eb5c1e304.jpg" alt="Accesorio">
+                <nav class="nav-desktop">
+                    <a href="#quienes-somos">Hombre</a>
+                    <a href="#woman-section">Mujer</a>
+                    <a href="#colection-section">Accesorios</a>
+                    <a href="#man-section">Novedades</a>
+                    <a href="#footer">Contacto</a>
+                </nav>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Buscar en GLOX3R">
+                    </div>
+                    <a href="#" class="icon-btn" title="Carrito">🛒</a>
+                    <a href="#" class="icon-btn" title="Cuenta">👤</a>
                 </div>
-                <p class="titulo-item">Accesorio</p>
             </div>
-            
-            <div class="item-somos">
-                <div class="imagen-placeholder">
-                    <img src="https://i.pinimg.com/736x/e3/cf/01/e3cf015dfb0251fb76f7e9e33616d07e.jpg" alt="Jeans">
-                </div>
-                <p class="titulo-item">Jeans</p>
-            </div>
-        </div>
-    </section>
+            <nav class="nav-mobile">
+                <a href="#man-section">Hombre</a>
+                <a href="#woman-section">Mujer</a>
+                <a href="#colection-section">Accesorios</a>
+                <a href="#man-section">Novedades</a>
+                <a href="#footer">Contacto</a>
+            </nav>
+        </header>
 
+        <main class="main-content">
+            <section id="quienes-somos" class="section text-center">
+                <h1 class="section-title">¿QUIENES SOMOS?</h1>
+                <p class="about-text">
+                    Somos una marca de moda urbana joven diseñada para el día a día. Nos enfocamos en ofrecerte prendas de alta calidad, cortes perfectos y la comodidad que necesitas para adueñarte de la calle a tu propio ritmo.
+                </p>
+                <div class="grid-3">
+                    <div class="card-wrapper">
+                        <div class="card-bg hero-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6xNgUWskCDcI73K2sS9Bv3agHQeTkkIXtkyjDc7jeQg&s=10" alt="Polo Boxy Fit">
+                        </div>
+                        <span class="product-title font-italic">Polo Boxy Fit</span>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="card-bg hero-card">
+                            <img src="https://i.pinimg.com/1200x/b7/cc/8c/b7cc8caed81bc1c7465b8fc1c2d550bb.jpg" alt="Accesorio">
+                        </div>
+                        <span class="product-title font-italic">Accesorio</span>
+                    </div>
+
+                    <div class="card-wrapper">
+                        <div class="card-bg hero-card">
+                            <img src="https://i.pinimg.com/1200x/13/b4/a6/13b4a6aa64fb0854d8d7d6e582df642d.jpg" alt="Jeans">
+                        </div>
+                        <span class="product-title font-italic">Jeans</span>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="divider">
+
+            <!-- SECCIÓN: MAN SECTION -->
+            <section id="man-section" class="section text-center">
+                <h2 class="section-subtitle">MAN SECTION</h2>
+                <p class="section-desc">Demuestra tu estilo sin importar el costo</p>
+                
+                <a href="#" class="btn-more">Ver más...</a>
+
+                <div class="grid-3">
+                    <div class="card-wrapper">
+                        <div class="card-bg product-card">
+                            <img src="https://i.pinimg.com/1200x/e2/d2/ac/e2d2ac1544648db0045c3e34721ef26b.jpg" alt="Polo Boxy Fit">
+                        </div>
+                        <span class="product-title font-italic">Polo Boxy Fit</span>
+                        <span class="product-price">S/40.00</span>
+                        <button class="btn-action">Agregar al carrito</button>
+                    </div>
+
+                    <div class="card-wrapper">
+                        <div class="card-bg product-card">
+                            <img src="https://i.pinimg.com/736x/9f/25/9c/9f259c6b6128da507c828ba3b687a37b.jpg" alt="Polo Oversize">
+                        </div>
+                        <span class="product-title font-italic">Polo Oversize</span>
+                        <span class="product-price">S/40.00</span>
+                        <button class="btn-action">Agregar al carrito</button>
+                    </div>
+
+                    <div class="card-wrapper">
+                        <div class="card-bg product-card">
+                            <img src="https://i.pinimg.com/1200x/fa/d6/1e/fad61eca6c78ed5a342fb3c1875bb844.jpg" alt="Polo Slim Fit">
+                        </div>
+                        <span class="product-title font-italic">Polo Slim Fit</span>
+                        <span class="product-price">S/40.00</span>
+                        <button class="btn-action">Agregar al carrito</button>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="divider">
+
+            <!-- SECCIÓN: WOMAN SECTION -->
+            <section id="woman-section" class="section text-center">
+                <h2 class="section-subtitle">WOMAN SECTION</h2>
+                <p class="section-desc">Demuestra tu estilo sin importar el costo</p>
+                
+                <a href="#" class="btn-more">Ver más...</a>
+
+                <div class="grid-3">
+                    <div class="card-wrapper">
+                        <div class="card-bg product-card">
+                            <img src="https://i.pinimg.com/1200x/62/66/42/6266428632f649c92b1e9656e872434a.jpg" alt="Polo Slim Fit">
+                        </div>
+                        <span class="product-title font-italic">Polo Slim Fit</span>
+                        <span class="product-price">S/40.00</span>
+                        <button class="btn-action">Agregar al carrito</button>
+                    </div>
+
+                    <div class="card-wrapper">
+                        <div class="card-bg product-card">
+                            <img src="https://i.pinimg.com/736x/cd/6d/37/cd6d3738e6cf592b5ea4b9ae67529632.jpg" alt="Polo básico">
+                        </div>
+                        <span class="product-title font-italic">Polo básico</span>
+                        <span class="product-price">S/40.00</span>
+                        <button class="btn-action">Agregar al carrito</button>
+                    </div>
+
+                    <div class="card-wrapper">
+                        <div class="card-bg product-card">
+                            <img src="https://i.pinimg.com/736x/f6/8c/14/f68c14f37a53098a566c81a66f61b393.jpg" alt="Polo Boxy Fit">
+                        </div>
+                        <span class="product-title font-italic">Polo Boxy Fit</span>
+                        <span class="product-price">S/40.00</span>
+                        <button class="btn-action">Agregar al carrito</button>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="divider">
+
+            <!-- SECCIÓN: COLECTION SECTION -->
+            <section id="colection-section" class="section text-center">
+                <h2 class="section-subtitle">COLECTION SECTION</h2>
+                <p class="section-desc">Accesorios y Joyeria</p>
+                
+                <a href="#" class="btn-more">Ver más...</a>
+
+                <div class="grid-3">
+                    <div class="card-wrapper">
+                        <div class="card-bg product-card">
+                            <img src="https://i.pinimg.com/1200x/4a/86/54/4a86544299750baed52f745a440141fc.jpg" alt="Pulsera Aura de Plata">
+                        </div>
+                        <span class="product-title font-italic">Pulsera Aura de Plata</span>
+                        <span class="product-price">S/40.00</span>
+                        <button class="btn-action">Añadir al carrito</button>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="card-bg product-card">
+                            <img src="https://i.pinimg.com/736x/2d/87/b1/2d87b15fff3b9a47523ad0361b34352c.jpg" alt="Collar JSCRST">
+                        </div>
+                        <span class="product-title font-italic">Collar JSCRST</span>
+                        <span class="product-price">S/40.00</span>
+                        <button class="btn-action">Añadir al carrito</button>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="card-bg product-card">
+                            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80" alt="Collar Boho Rebel">
+                        </div>
+                        <span class="product-title font-italic">Collar Boho Rebel</span>
+                        <span class="product-price">S/40.00</span>
+                        <button class="btn-action">Añadir al carrito</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+<footer>
+    <div class="logo-pie-pagina">GLOX3R</div>
+    <p>©2026, GLOX3R</p>
+    <div class="enlaces-footer">
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Información del contacto</a>
+        <a href="#">Términos del servicio</a>
+        <a href="#">Política de reembolso</a>
+        <a href="#">Preferencias de cookies</a>
+        <a href="#">Libro de reclamaciones</a>
+    </div>
+</footer>
 </body>
 </html>

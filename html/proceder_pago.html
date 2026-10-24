@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLOX3R - Checkout</title>
+    <link rel="stylesheet" href="../css/proceder_pago.css">
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN (Enlaces actualizados) -->
+    <header class="navbar">
+        <div class="menu-icon">☰</div>
+        <div class="logo">GLOX3R</div>
+
+        <ul class="menu">
+            <li><a href="hombre.html">Hombre</a></li>
+            <li><a href="mujer.html">Mujer</a></li>
+            <li><a href="accesorios.html">Accesorios</a></li>
+            <li><a href="novedades.html">Novedades</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <div class="acciones-navbar">
+            <input type="text" placeholder="Buscar en GLOX3R">
+            <a href="carrito.html" class="icono" style="text-decoration: none;">🛒</a>
+            <span class="icono">👤</span>
+        </div>
+    </header>
+
+    <section class="seccion-checkout">
+        <h1>FINALIZAR COMPRA</h1>
+        
+        <div class="contenedor-columnas">
+            
+            <!-- COLUMNA IZQUIERDA (Formulario de pago) -->
+            <div class="columna-formulario">
+                
+                <div class="bloque-formulario">
+                    <h2>1. INFORMACIÓN DE CONTACTO</h2>
+                    <input type="email" placeholder="Correo electrónico" class="input-texto" required>
+                    <input type="tel" placeholder="Teléfono / Celular" class="input-texto" required>
+                </div>
+
+                <div class="bloque-formulario">
+                    <h2>2. DIRECCIÓN DE ENVÍO</h2>
+                    <div class="fila-inputs">
+                        <input type="text" placeholder="Nombres" class="input-mitad" required>
+                        <input type="text" placeholder="Apellidos" class="input-mitad" required>
+                    </div>
+                    <input type="text" placeholder="Dirección completa (Calle, Número, Dpto)" class="input-texto" required>
+                    <input type="text" placeholder="Distrito / Ciudad" class="input-texto" required>
+                    <input type="text" placeholder="Referencia (opcional)" class="input-texto">
+                </div>
+
+                <div class="bloque-formulario">
+                    <h2>3. MÉTODO DE ENVÍO</h2>
+                    <div class="opciones-radio">
+                        <label class="radio-label">
+                            <input type="radio" name="envio" checked>
+                            <span>Envío Estándar (3-5 días hábiles) - <strong>S/15.00</strong></span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="envio">
+                            <span>Envío Express Lima (24 horas) - <strong>S/25.00</strong></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="bloque-formulario">
+                    <h2>4. PAGO SEGURO</h2>
+                    <div class="caja-tarjeta">
+                        <input type="text" placeholder="Número de Tarjeta" class="input-texto" required>
+                        <div class="fila-inputs">
+                            <input type="text" placeholder="Vencimiento (MM/AA)" class="input-mitad" required>
+                            <input type="text" placeholder="CVV" class="input-mitad" required>
+                        </div>
+                        <input type="text" placeholder="Nombre en la tarjeta" class="input-texto" required>
+                    </div>
+                </div>
+
+                <!-- AQUÍ ESTÁ EL ENLACE: Conecta directo a tu archivo de confirmación -->
+                <a href="confirmacion.html" class="btn-confirmar" style="display: block; text-align: center; text-decoration: none; box-sizing: border-box;">CONFIRMAR Y PAGAR</a>
+            </div>
+
+            <!-- COLUMNA DERECHA (Resumen del pedido) -->
+            <div class="columna-resumen">
+                <h2>RESUMEN DEL PEDIDO</h2>
+                
+                <div class="mini-productos">
+                    <p>1x Polo Boxy Fit - S/40.00</p>
+                    <p>1x Jeans Baggy Vintage - S/90.00</p>
+                </div>
+                
+                <hr class="linea">
+
+                <div class="fila-resumen">
+                    <p>Subtotal</p>
+                    <p>S/130.00</p>
+                </div>
+                <div class="fila-resumen">
+                    <p>Costo de Envío</p>
+                    <p>S/15.00</p>
+                </div>
+                
+                <hr class="linea">
+                
+                <div class="fila-resumen total">
+                    <p>TOTAL A PAGAR</p>
+                    <p>S/145.00</p>
+                </div>
+                <p class="texto-seguro">🔒 Transacción encriptada y segura</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="pie-pagina">
+        <div class="footer-logo">
+            <h2>GLOX3R</h2>
+        </div>
+        <div class="footer-inferior">
+            <p class="texto-copyright">
+                © 2026, glox3r - Política de Privacidad - Información del contacto - Términos del servicio - Política de reembolso - Preferencias de cookies - Libro de reclamaciones
+            </p>
+        </div>
+    </footer>
+    
+</body>
+</html>
