@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333333;
+}
+
+.navbar {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: #ffffff;
+    display: flex;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    cursor: pointer;
+    color: #ffffff;
+    margin-left: 15px; 
+    margin-right: auto;
+}
+.logo .enlace {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.acciones input {
+    width: 280px;
+    padding: 8px 14px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background-color: #2a2a2a;
+    color: #fdfcfc;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.acciones input::placeholder {
+    color: #aaa;
+}
+
+.icono {
+    font-size: 31px;
+    color: #ffffff;
+    margin-left: 10px; 
+    cursor: pointer;
+    text-decoration: none; 
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.icono:hover {
+    color: #cccccc;
+}
+
+.catalogo-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.catalogo-header {
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.banner-seccion-full {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    margin-bottom: 40px;
+
+}
+
+.banner-seccion-full .carousel-inner,
+.banner-seccion-full .carousel-item {
+    width: 100%;
+    height: 100%;
+}
+
+.banner-seccion-full .imagen-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.banner-seccion-full .titulo-banner {
+    position: absolute;
+    left: 60px;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    z-index: 10;
+    margin: 0;
+    pointer-events: none;
+}
+
+.productos-caja {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.producto-carta {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    width: 102%;
+    padding: 8px;
+}
+
+.producto-carta:hover {
+    transform: translateY(-5px);
+}
+
+.imagen-producto {
+    width: 100%;
+    height: 250px;
+    border-radius: 15px;
+    padding: 8px;
+    background-color: #e2e2e2;
+    object-fit: cover;
+    display: block;
+}
+
+.informacion-producto {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.nombre-producto {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.precio-producto {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.boton-carrito {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+.boton-carrito:hover {
+    background-color: #333;
+}
+
+footer {
+    margin-top: 80px;
+    padding: 40px 50px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+.logo-pie-pagina {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+footer p {
+    font-size: 14px;
+    color: #666;
+}
+
+.enlaces-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.enlaces-footer a {
+    color: #555;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.enlaces-footer a:hover {
+    text-decoration: underline;
+}

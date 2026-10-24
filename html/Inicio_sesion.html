@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLOX3R - Iniciar sesión</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/inicio.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="menu-icon">☰</div>
+    <div class="logo">GLOX3R</div>
+
+    <nav class="categorias">
+        <a href="/hombre">Hombre</a>
+        <a href="/mujer">Mujer</a>
+        <a href="/accesorios">Accesorios</a>
+        <a href="/novedades">Novedades</a>
+        <a href="/contacto">Contacto</a>
+    </nav>
+
+    <div class="acciones">
+        <form action="/Buscar">
+            <input type="text" placeholder="Buscar en GLOX3R">
+        </form>
+
+        <a href="/carrito" class="icono">
+            <i class='bx bx-shopping-bag'></i>
+        </a>
+        <a href="/cuenta" class="icono">
+            <i class='bx bx-user'></i>
+        </a>
+    </div>
+</header>
+
+<main class="contenedor">
+    <section class="columna-beneficios">
+        <div class="marca">GZ</div>
+        <h1 class="izquierda_titulo">GLOX3R</h1>
+            
+        <h2>BENEFICIOS DE TU CUENTA</h2>
+
+        <ul class="lista-beneficios">
+            <li>
+                <i class='bx bx-star'></i>
+                <span>Acceso a novedades</span>
+            </li>
+            <li>
+                <i class='bx bx-package'></i>
+                <span>Envíos express</span>
+            </li>
+            <li>
+                <i class='bx bx-crown'></i>
+                <span>Ofertas Exclusivas</span>
+            </li>
+            <li>
+                <i class='bx bx-support'></i>
+                <span>Soporte</span>
+            </li>
+            <li>
+                <i class='bx bx-help-circle'></i>
+                <span>Preguntas Frecuentes / Contactar a Atención al cliente</span>
+            </li>
+        </ul>
+    </section>
+            
+    <section class="columna-formulario">
+        <div class="formulario">
+            <h2>INICIAR SESIÓN</h2>
+            <p class="subtitulo">Ingresa a tu cuenta para continuar</p>
+
+            <form action="/login" method="POST" class="formulario-login">
+                    
+                <div class="campo">
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+                </div>
+
+                <div class="campo">
+                    <div class="campo-header">
+                        <label for="clave">Clave</label>
+                        <a href="/recuperar" class="clave_olvidada">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <input type="password" id="clave" name="clave" placeholder="Introduzca su contraseña aquí" required>
+                </div>
+
+                <div class="opciones">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="recordarme">
+                        <span>Recordarme</span>
+                    </label>
+                </div>
+                <button type="submit" class="btn-iniciar">Iniciar sesión</button>
+            </form>
+            <p class="texto-registro">
+                ¿No tienes cuenta? <a href="/registro">Regístrate aquí</a>
+            </p>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>
