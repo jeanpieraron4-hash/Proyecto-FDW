@@ -18,6 +18,9 @@ body {
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 10;
+    line-height: normal;
 }
 
 .menu-icon {
@@ -35,6 +38,45 @@ body {
     color: #ffffff;
     margin-left: 15px; 
     margin-right: auto;
+}
+.logo a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.categorias {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+    
+.categorias ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.categorias a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: color 0.3s background-color 0.3s;
+}
+
+.categorias a:hover {
+    color: #cccccc;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .acciones {
@@ -72,7 +114,6 @@ body {
 .icono:hover {
     color: #cccccc;
 }
-
 
 .banner-seccion-full {
     position: relative;
