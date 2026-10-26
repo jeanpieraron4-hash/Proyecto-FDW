@@ -35,8 +35,11 @@ body {
     letter-spacing: 3px;
     cursor: pointer;
     color: #ffffff;
-    margin-left: 15px; 
-    
+    margin-left: 10px; 
+}
+.logo a {
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .categorias {
@@ -55,11 +58,15 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: 0.5px;
     white-space: nowrap;
-    transition: color 0.3s;
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: color 0.3s background-color 0.3s;
 }
 
 .categorias a:hover {
     color: #cccccc;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .acciones {
