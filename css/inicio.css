@@ -43,11 +43,18 @@ body {
 }
 
 .categorias {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+    
+.categorias ul {
     display: flex;
     align-items: center;
     gap: 25px;
     margin-left: auto;
     margin-right: auto;
+    list-style: none;
 }
 
 .categorias a {

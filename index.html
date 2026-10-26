@@ -4,39 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GLOX3R - Tienda Urbana</title>
-    <link rel="stylesheet" href="CSS/portada.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/portada.css">
 </head>
 <body>
 
-    <div class="page-container">
-        <header class="header">
-            <div class="header-content">
-                <div class="logo">
-                    <span>≡ GLOX3R</span>
-                </div>
-                <nav class="nav-desktop">
-                    <a href="#quienes-somos">Hombre</a>
-                    <a href="#woman-section">Mujer</a>
-                    <a href="#colection-section">Accesorios</a>
-                    <a href="#man-section">Novedades</a>
-                    <a href="#footer">Contacto</a>
-                </nav>
-                <div class="header-actions">
-                    <div class="search-box">
-                        <input type="text" placeholder="Buscar en GLOX3R">
-                    </div>
-                    <a href="#" class="icon-btn" title="Carrito">🛒</a>
-                    <a href="#" class="icon-btn" title="Cuenta">👤</a>
-                </div>
-            </div>
-            <nav class="nav-mobile">
-                <a href="#man-section">Hombre</a>
-                <a href="#woman-section">Mujer</a>
-                <a href="#colection-section">Accesorios</a>
-                <a href="#man-section">Novedades</a>
-                <a href="#footer">Contacto</a>
-            </nav>
-        </header>
+<header class="navbar">
+    <div class="menu-icon">☰</div>
+    <div class="logo">
+        <a href="../index.html">GLOX3R</a>
+    </div>
+
+    <nav class="categorias">
+        <ul>
+            <li><a href="../html/catalogo_hombre.html">Hombre</a></li>
+            <li><a href="../html/catalogo_mujer.html">Mujer</a></li>
+            <li><a href="../html/catalogo_accesorios.html">Accesorios</a></li>
+            <li><a href="../html/catalogo_novedades.html">Novedades</a></li>
+            <li><a href="../html/contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="acciones">
+        <form action="../html/buscar.html">
+            <input type="text" placeholder="Buscar en GLOX3R">
+        </form>
+
+        <a href="../html/carrito.html" class="icono">
+            <i class='bx bx-shopping-bag'></i>
+        </a>
+        <a href="../html/cuenta.html" class="icono">
+            <i class='bx bx-user'></i>
+        </a>
+    </div>
+</header>
 
         <main class="main-content">
             <section id="quienes-somos" class="section text-center">
