@@ -68,7 +68,7 @@ body {
     display: inline-block;
     padding: 8px 12px;
     border-radius: 20px;
-    transition: color 0.3s background-color 0.3s;
+    transition: color 0.3s, background-color 0.3s;
 }
 
 .categorias a:hover {
