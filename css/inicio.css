@@ -35,7 +35,7 @@ body {
     letter-spacing: 3px;
     cursor: pointer;
     color: #ffffff;
-    margin-left: 10px; 
+    margin-left: 15px; 
 }
 .logo a {
     color: #ffffff;
@@ -61,7 +61,7 @@ body {
     color: #ffffff;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: 0.5px;
     white-space: nowrap;
