@@ -157,11 +157,6 @@ body {
     padding: 60px 20px;
 }
 
-.fondo-gris {
-    background-color: #e9ecef;
-}
-
-
 .grid-accesorios {
     display: flex;
     justify-content: flex-start; 
@@ -193,7 +188,7 @@ body {
 
 .escalera-productos {
     display: grid;
-    grid-template-columns: repeat(4, 320px); 
+    grid-template-columns: repeat(4, 1fr); 
     grid-template-rows: repeat(4, auto);
     gap: 25px; 
     width: 100%;
@@ -287,33 +282,6 @@ body {
     border-radius: 4px;
 }
 
-.banner-principal-accesorios {
-    width: 100%;
-    height: 450px; 
-    background-image: url('../image/image.png'); 
-    background-size: cover;    
-    background-position: center;
-    display: flex;
-    align-items: flex-end;       
-    padding: 40px 60px;
-    border-bottom: 3px solid #0d1b2a;
-    position: relative;
-}
- 
-.contenido-banner h1 {
-    font-size: 38px;
-    color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
-    margin-bottom: 8px;
-}
- 
-.contenido-banner p {
-    font-size: 18px;
-    color: #e0a96d;
-    font-style: italic;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-}
- 
 footer {
     margin-top: 80px;
     padding: 40px 50px;
