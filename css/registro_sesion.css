@@ -1,0 +1,243 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333333;
+    min-height: 100vh;
+}
+
+.contenedor-registro {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.seccion-beneficios {
+    flex: 1;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #ffffff;
+    margin-bottom: 50px;
+}
+
+.seccion-beneficios h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.seccion-beneficios p {
+    color: #cccccc;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.lista-beneficios {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.lista-beneficios li {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-left: 25px;
+    position: relative;
+}
+
+.lista-beneficios li::before {
+    content: "✓";
+    color: #b8b8b8;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.seccion-formulario {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 30px;
+    background-color: #ffffff;
+}
+
+.formulario-registro {
+    width: 100%;
+    max-width: 430px;
+}
+
+.formulario-registro h2 {
+    font-size: 2rem;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.subtitulo-registro {
+    color: #777777;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.campo-registro {
+    margin-bottom: 20px;
+}
+
+.campo-registro label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333333;
+}
+
+.campo-registro input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #d6d6d6;
+    border-radius: 6px;
+    background-color: #ffffff;
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.campo-registro input:focus {
+    border-color: #1a1a1a;
+    box-shadow: 0 0 0 3px rgba(26, 26, 26, 0.1);
+}
+
+.campo-registro input::placeholder {
+    color: #aaaaaa;
+}
+
+.terminos-registro {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 20px 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #555555;
+}
+
+.terminos-registro input {
+    margin-top: 4px;
+    accent-color: #1a1a1a;
+}
+
+.terminos-registro a {
+    color: #1a1a1a;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.boton-registro {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.boton-registro:hover {
+    background-color: #333333;
+}
+
+.boton-registro:active {
+    transform: scale(0.99);
+}
+
+.enlace-inicio-sesion {
+    margin-top: 25px;
+    text-align: center;
+    color: #777777;
+    font-size: 0.9rem;
+}
+
+.enlace-inicio-sesion a {
+    color: #1a1a1a;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.enlace-inicio-sesion a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .contenedor-registro {
+        flex-direction: column;
+    }
+
+    .seccion-beneficios {
+        padding: 35px 25px;
+    }
+
+    .logo {
+        font-size: 26px;
+        margin-bottom: 25px;
+    }
+
+    .seccion-beneficios h1 {
+        font-size: 2rem;
+    }
+
+    .seccion-beneficios p {
+        margin-bottom: 20px;
+    }
+
+    .lista-beneficios {
+        gap: 12px;
+    }
+
+    .seccion-formulario {
+        padding: 40px 25px;
+    }
+
+    .formulario-registro h2 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .seccion-beneficios {
+        padding: 30px 20px;
+    }
+
+    .seccion-formulario {
+        padding: 30px 20px;
+    }
+
+    .seccion-beneficios h1 {
+        font-size: 1.7rem;
+    }
+}
