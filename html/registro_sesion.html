@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLOX3R - Crear cuenta</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/registro_sesion.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="menu-icon">☰</div>
+    <div class="logo">
+        <a href="../index.html">GLOX3R</a>
+    </div>
+
+    <nav class="categorias">
+        <ul>
+            <li><a href="../html/catalogo_hombre.html">Hombre</a></li>
+            <li><a href="../html/catalogo_mujer.html">Mujer</a></li>
+            <li><a href="../html/accesorios.html">Accesorios</a></li>
+            <li><a href="../html/novedades.html">Novedades</a></li>
+            <li><a href="../html/contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="acciones">
+        <form>
+            <input type="text" placeholder="Buscar en GLOX3R">
+        </form>
+
+        <a href="../html/carrito_1.html" class="icono">
+            <i class='bx bx-shopping-bag'></i>
+        </a>
+        <a href="../html/Inicio_sesion.html" class="icono">
+            <i class='bx bx-user'></i>
+        </a>
+    </div>
+</header>
+
+<main class="contenedor">
+    <section class="columna-beneficios">
+        <div class="marca">GZ</div>
+        <h1 class="izquierda_titulo">GLOX3R</h1>
+
+        <h2>BENEFICIOS DE TU CUENTA</h2>
+
+        <ul class="lista-beneficios">
+            <li>
+                <i class='bx bx-star'></i>
+                <span>Acceso a novedades</span>
+            </li>
+            <li>
+                <i class='bx bx-package'></i>
+                <span>Envíos express</span>
+            </li>
+            <li>
+                <i class='bx bx-crown'></i>
+                <span>Ofertas Exclusivas</span>
+            </li>
+            <li>
+                <i class='bx bx-support'></i>
+                <span>Soporte</span>
+            </li>
+        </ul>
+    </section>
+
+    <section class="columna-formulario">
+        <div class="formulario">
+            <h2>CREAR CUENTA</h2>
+            <p class="subtitulo">Completa tus datos para registrarte</p>
+
+            <form class="formulario-login">
+
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="campo">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+                </div>
+
+                <div class="campo">
+                    <label for="clave">Clave</label>
+                    <input type="password" id="clave" name="clave" placeholder="Mínimo 8 caracteres" minlength="8" required>
+                </div>
+
+                <div class="campo">
+                    <label for="clave2">Confirmar clave</label>
+                    <input type="password" id="clave2" name="clave2" placeholder="Repite tu contraseña" minlength="8" required>
+                </div>
+
+                <div class="opciones">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="terminos" required>
+                        <span>Acepto los términos y condiciones</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-iniciar">Crear cuenta</button>
+            </form>
+
+            <p class="texto-registro">
+                ¿Ya tienes cuenta? <a href="../html/Inicio_sesion.html">Inicia sesión</a>
+            </p>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>
