@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333333;
+}
+ 
+.navbar {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 10;
+    line-height: normal;
+}
+ 
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: #ffffff;
+    display: flex;
+}
+ 
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    cursor: pointer;
+    color: #ffffff;
+    margin-left: 15px; 
+    margin-right: auto;
+}
+ 
+.logo a {
+    text-decoration: none;
+    color: #ffffff;
+}
+ 
+.categorias {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+    
+.categorias ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+ 
+.categorias a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: color 0.3s, background-color 0.3s;
+}
+ 
+.categorias a:hover {
+    color: #cccccc;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+ 
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+ 
+.acciones input {
+    width: 280px;
+    padding: 8px 14px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background-color: #2a2a2a;
+    color: #fdfcfc;
+    outline: none;
+    font-size: 0.9rem;
+}
+ 
+.acciones input::placeholder {
+    color: #aaa;
+}
+ 
+.icono {
+    font-size: 31px;
+    color: #ffffff;
+    margin-left: 10px; 
+    cursor: pointer;
+    text-decoration: none; 
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+ 
+.icono:hover {
+    color: #cccccc;
+}
+ 
+.contacto {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+ 
+.contacto h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #111;
+}
+ 
+.contacto-intro {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 40px auto;
+    line-height: 1.5;
+    color: #555;
+    font-size: 16px;
+}
+ 
+.contacto-contenido {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+ 
+.contacto-datos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+ 
+.dato {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+ 
+.dato i {
+    font-size: 2rem;
+    color: #1a1a1a;
+}
+ 
+.dato h3 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+    color: #1a1a1a;
+}
+ 
+.dato p {
+    font-size: 0.95rem;
+    color: #555;
+}
+ 
+.contacto-formulario {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+ 
+.contacto-formulario h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+ 
+.campo {
+    margin-bottom: 20px;
+}
+ 
+.campo label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #374151;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+ 
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+}
+ 
+.campo textarea {
+    height: 140px;
+    resize: vertical;
+}
+ 
+.campo input:focus,
+.campo textarea:focus {
+    border-color: #1a1a1a;
+    box-shadow: 0 0 0 2px rgba(26, 26, 26, 0.1);
+}
+ 
+.btn-enviar {
+    width: 100%;
+    padding: 14px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+ 
+.btn-enviar:hover {
+    background-color: #333333;
+}
+ 
+footer {
+    margin-top: 80px;
+    padding: 40px 50px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+ 
+.logo-pie-pagina {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+ 
+footer p {
+    font-size: 14px;
+    color: #666;
+}
+ 
+.enlaces-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+ 
+.enlaces-footer a {
+    color: #555;
+    text-decoration: none;
+    font-size: 13px;
+}
+ 
+.enlaces-footer a:hover {
+    text-decoration: underline;
+}
