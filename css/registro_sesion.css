@@ -12,232 +12,311 @@ body {
     min-height: 100vh;
 }
 
-.contenedor-registro {
-    display: flex;
-    min-height: 100vh;
+.navbar {
     width: 100%;
-}
-
-.seccion-beneficios {
-    flex: 1;
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
     background-color: #1a1a1a;
     color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.menu-icon {
+    font-size: 30px;
+    font-size: 26px;
+    color: #ffffff;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 60px;
 }
 
 .logo {
     font-size: 30px;
     font-weight: bold;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
+    cursor: pointer;
     color: #ffffff;
-    margin-bottom: 50px;
+    margin-left: 15px; 
 }
 
-.seccion-beneficios h1 {
-    font-size: 2.5rem;
-    line-height: 1.2;
-    margin-bottom: 20px;
+.logo a {
+    color: #ffffff;
+    text-decoration: none;
 }
 
-.seccion-beneficios p {
+.categorias {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.categorias ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.categorias a {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.05rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.categorias a:hover {
     color: #cccccc;
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.acciones input {
+    width: 280px;
+    padding: 8px 14px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background-color: #2a2a2a;
+    color: #fdfcfc;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.acciones input::placeholder {
+    border-color: #aaa;
+}
+
+.icono {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-size: 31px;
+    text-decoration: none;
+    transition: color 0.3s;
+    cursor:pointer;
+}
+
+.icono:hover {
+    color: #cccccc;
+}
+
+.contenedor {
+    display: flex;
+    width: 100%;
+    min-height: calc(100vh - 85px);
+}
+
+.columna-beneficios {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 55px;
+    background-color: #272727;
+    border-right: 1px solid #e5e7eb;
+    color: #fff;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    margin-bottom:12px;
+    border: 1px solid #777;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    background-color: #1a1a1a;
+
+}
+
+.izquierda_titulo {
+    margin-bottom: 2px;
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: 5px;
+}
+
+.columna-beneficios h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #ffffff;
 }
 
 .lista-beneficios {
-    list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 35px;
+    list-style: none;
 }
 
 .lista-beneficios li {
-    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 20px;
     line-height: 1.5;
-    padding-left: 25px;
-    position: relative;
 }
 
-.lista-beneficios li::before {
-    content: "✓";
-    color: #b8b8b8;
-    position: absolute;
-    left: 0;
-    font-weight: bold;
+.lista-beneficios li i {
+    flex-shrink: 0;
+    color: #ccc;
+    font-size: 2rem;
 }
 
-.seccion-formulario {
+.columna-formulario {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 50px 30px;
+    padding: 45px 35px;
     background-color: #ffffff;
 }
 
-.formulario-registro {
+.formulario {
     width: 100%;
-    max-width: 430px;
+    max-width: 420px;
 }
 
-.formulario-registro h2 {
-    font-size: 2rem;
+.formulario h2 {
+    margin-bottom: 8px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     color: #1a1a1a;
-    margin-bottom: 10px;
+    font-size: 1.8rem;
 }
 
-.subtitulo-registro {
-    color: #777777;
-    font-size: 0.95rem;
+.subtitulo {
     margin-bottom: 30px;
+    color: #6b7260;
+    font-size: 0.9rem;
     line-height: 1.5;
 }
 
-.campo-registro {
+.formulario-login {
+    width: 100%;
+}
+
+.campo {
     margin-bottom: 20px;
 }
 
-.campo-registro label {
+.campo label {
     display: block;
-    font-size: 0.9rem;
+    margin-bottom: 7px;
+    color: #333;
+    font-size: 0.85rem;
     font-weight: 600;
-    margin-bottom: 8px;
-    color: #333333;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.campo-registro input {
+.campo input {
+    display: block;
     width: 100%;
-    padding: 13px 15px;
+    padding: 13px 14px;
     border: 1px solid #d6d6d6;
     border-radius: 6px;
-    background-color: #ffffff;
+    background-color: #fff;
+    color: #333;
     font-family: inherit;
     font-size: 0.95rem;
     outline: none;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.campo-registro input:focus {
+.campo input::placeholder {
+    color: #aaa;
+}
+
+.campo input:focus {
     border-color: #1a1a1a;
     box-shadow: 0 0 0 3px rgba(26, 26, 26, 0.1);
 }
 
-.campo-registro input::placeholder {
-    color: #aaaaaa;
+.opciones {
+    margin: 20px 0;
 }
 
-.terminos-registro {
+.checkbox-label {
     display: flex;
     align-items: flex-start;
-    gap: 10px;
-    margin: 20px 0;
+    gap: 8px;
+    color: #4b5563;
     font-size: 0.85rem;
     line-height: 1.5;
-    color: #555555;
+    cursor: pointer;
+    margin-bottom: 25px; 
 }
 
-.terminos-registro input {
+.checkbox-label input {
+    flex-shrink: 0;
     margin-top: 4px;
     accent-color: #1a1a1a;
+    cursor: pointer;
 }
 
-.terminos-registro a {
-    color: #1a1a1a;
-    font-weight: 600;
-    text-decoration: underline;
-}
-
-.boton-registro {
+.btn-iniciar {
+    display: block;
     width: 100%;
     padding: 14px;
     border: none;
     border-radius: 6px;
     background-color: #1a1a1a;
-    color: #ffffff;
+    color: #fff;
     font-family: inherit;
     font-size: 0.95rem;
     font-weight: 700;
+    text-transform: uppercase; 
     letter-spacing: 0.5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
 }
 
-.boton-registro:hover {
-    background-color: #333333;
+.btn-iniciar:hover {
+    background-color: #333;
 }
 
-.boton-registro:active {
+.btn-iniciar:active {
     transform: scale(0.99);
 }
 
-.enlace-inicio-sesion {
-    margin-top: 25px;
-    text-align: center;
-    color: #777777;
-    font-size: 0.9rem;
+.btn-iniciar:focus-visible {
+    outline: 2px solid #555;
+    outline-offset: 3px;
 }
 
-.enlace-inicio-sesion a {
+.texto-registro {
+    margin-top: 25px;
+    color: #777;
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.texto-registro a {
     color: #1a1a1a;
     font-weight: 700;
     text-decoration: none;
-}
-
-.enlace-inicio-sesion a:hover {
-    text-decoration: underline;
-}
-
-
-@media (max-width: 768px) {
-    .contenedor-registro {
-        flex-direction: column;
-    }
-
-    .seccion-beneficios {
-        padding: 35px 25px;
-    }
-
-    .logo {
-        font-size: 26px;
-        margin-bottom: 25px;
-    }
-
-    .seccion-beneficios h1 {
-        font-size: 2rem;
-    }
-
-    .seccion-beneficios p {
-        margin-bottom: 20px;
-    }
-
-    .lista-beneficios {
-        gap: 12px;
-    }
-
-    .seccion-formulario {
-        padding: 40px 25px;
-    }
-
-    .formulario-registro h2 {
-        font-size: 1.7rem;
-    }
-}
-
-@media (max-width: 400px) {
-    .seccion-beneficios {
-        padding: 30px 20px;
-    }
-
-    .seccion-formulario {
-        padding: 30px 20px;
-    }
-
-    .seccion-beneficios h1 {
-        font-size: 1.7rem;
-    }
 }
