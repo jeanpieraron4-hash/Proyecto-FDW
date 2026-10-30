@@ -1,45 +1,59 @@
-document.addEventListener('DOMContentLoaded', function() {
-    
-    // Conectamos con el formulario de inicio de sesión
-    const formInicio = document.getElementById('form-inicio');
-    let mensajeError = document.getElementById('mensaje-error');
+/*
+ * GLOX3R - Inicio de sesión (demostración sin servidor).
+ * Compara contra la cuenta creada en el registro (guardada en este navegador, con hash).
+ * Se conserva la cuenta de acceso del profesor definida en el proyecto original.
+ */
+(function () {
+  'use strict';
 
-    if (formInicio) {
-        formInicio.addEventListener('submit', function(evento) {
-            evento.preventDefault(); 
+  var CLAVE_USUARIO = 'glox3r_usuario';
+  var CUENTA_PROFESOR = { correo: 'profesor@usmp.pe', clave: 'gloxer2026' };
+  var form = document.getElementById('form-inicio');
+  if (!form) return;
 
-            // Capturamos lo que intenta ingresar el usuario
-            const emailIngresado = document.getElementById('email-inicio').value;
-            const passIngresada = document.getElementById('pass-inicio').value;
+  var msg = document.getElementById('mensaje-formulario');
+  function mostrar(texto, tipo) {
+    msg.textContent = texto;
+    msg.className = 'mensaje-formulario ' + (tipo || '');
+  }
 
-            // Extraemos los datos que se guardaron en la página de registro
-            const emailGuardado = localStorage.getItem('gloxer_email');
-            const passGuardada = localStorage.getItem('gloxer_password');
+  function aHex(buffer) {
+    return Array.prototype.map.call(new Uint8Array(buffer), function (b) { return ('0' + b.toString(16)).slice(-2); }).join('');
+  }
+  function hashClave(clave, sal) {
+    return window.crypto.subtle.digest('SHA-256', new TextEncoder().encode(sal + ':' + clave)).then(aHex);
+  }
+  function usuarioGuardado() {
+    try { return JSON.parse(window.localStorage.getItem(CLAVE_USUARIO)); } catch (e) { return null; }
+  }
+  function entrar() {
+    mostrar('¡Bienvenido de vuelta a GLOX3R!', 'ok');
+    setTimeout(function () { window.location.href = 'catalogo_hombre.html'; }, 700);
+  }
+  function rechazar() {
+    mostrar('Correo o contraseña incorrectos. Verifica tus datos o regístrate.', 'error');
+  }
 
-            // VERIFICACIÓN 1: Comparamos si coincide con el usuario registrado
-            const esUsuarioRegistrado = (emailIngresado === emailGuardado && passIngresada === passGuardada);
-            
-            // VERIFICACIÓN 2: Cuenta del profesor (Puerta trasera)
-            const esProfesor = (emailIngresado === "profesor@usmp.pe" && passIngresada === "gloxer2026");
+  var recuperar = document.getElementById('enlace-recuperar');
+  if (recuperar) {
+    recuperar.addEventListener('click', function (ev) {
+      ev.preventDefault();
+      mostrar('La recuperación de contraseña aún no está disponible en esta versión.', 'info');
+    });
+  }
 
-            if (esUsuarioRegistrado || esProfesor) {
-                alert("¡Bienvenido de vuelta a GLOX3R!");
-                
-                // Ingreso exitoso: Lo manda a la tienda (asegúrate de que este archivo exista)
-                window.location.href = "catalogo_hombre.html"; 
-            } 
-            else {
-                // Si falla, mostramos el texto de error en rojo
-                if (mensajeError) {
-                    mensajeError.textContent = "Correo o contraseña incorrectos. Verifica tus datos o regístrate.";
-                    mensajeError.style.display = "block";
-                    mensajeError.style.color = "#d93025";
-                    mensajeError.style.marginTop = "10px";
-                    mensajeError.style.fontSize = "14px";
-                } else {
-                    alert("Correo o contraseña incorrectos. Verifica tus datos o regístrate.");
-                }
-            }
-        });
-    }
-});
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var correo = form.elements.correo.value.trim().toLowerCase();
+    var clave = form.elements.clave.value;
+    if (!correo || !clave) { mostrar('Ingresa tu correo y tu contraseña.', 'error'); return; }
+
+    if (correo === CUENTA_PROFESOR.correo && clave === CUENTA_PROFESOR.clave) { entrar(); return; }
+
+    var u = usuarioGuardado();
+    if (!u || u.correo !== correo) { rechazar(); return; }
+    if (!window.crypto || !window.crypto.subtle) { mostrar('Este navegador no permite verificar la cuenta en este contexto. Abre el sitio desde https o localhost.', 'error'); return; }
+    hashClave(clave, u.sal).then(function (h) { if (h === u.hash) entrar(); else rechazar(); })
+      .catch(function () { mostrar('No se pudo verificar la cuenta. Inténtalo de nuevo.', 'error'); });
+  });
+})();

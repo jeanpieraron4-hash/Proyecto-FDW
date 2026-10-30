@@ -1,32 +1,57 @@
-document.addEventListener('DOMContentLoaded', function() {
-    
-    // Conectamos con tu formulario de registro
-    const formRegistro = document.getElementById('form-registro');
+/*
+ * GLOX3R - Registro (demostración sin servidor).
+ * La cuenta se guarda solo en este navegador (localStorage). La contraseña NO se guarda en
+ * texto plano: se almacena un hash SHA-256 con sal. Esto es una demostración académica, no
+ * un sistema de autenticación real.
+ */
+(function () {
+  'use strict';
 
-    if (formRegistro) {
-        formRegistro.addEventListener('submit', function(evento) {
-            evento.preventDefault(); // Evita que la página parpadee
+  var CLAVE_USUARIO = 'glox3r_usuario';
+  var form = document.getElementById('form-registro');
+  if (!form) return;
 
-            // Capturamos los datos que escribió el usuario
-            const email = document.getElementById('email-registro').value;
-            const password = document.getElementById('pass-registro').value;
-            const passwordConfirm = document.getElementById('clave2').value;
+  var msg = document.getElementById('mensaje-formulario');
+  var RE_CORREO = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
-            // VALIDACIÓN: Comprobamos que las contraseñas coincidan
-            if (password !== passwordConfirm) {
-                alert("Las contraseñas no coinciden. Por favor, vuélvelo a intentar.");
-                return; // Detiene el código aquí si hay error
-            }
+  function mostrar(texto, tipo) {
+    msg.textContent = texto;
+    msg.className = 'mensaje-formulario ' + (tipo || '');
+  }
 
-            // Guardamos los datos en la memoria del navegador (localStorage)
-            localStorage.setItem('gloxer_email', email);
-            localStorage.setItem('gloxer_password', password);
+  function aHex(buffer) {
+    return Array.prototype.map.call(new Uint8Array(buffer), function (b) { return ('0' + b.toString(16)).slice(-2); }).join('');
+  }
+  function hashClave(clave, sal) {
+    var datos = new TextEncoder().encode(sal + ':' + clave);
+    return window.crypto.subtle.digest('SHA-256', datos).then(aHex);
+  }
 
-            // Le avisamos al usuario y lo mandamos a que inicie sesión
-            alert("¡Registro exitoso! Tu cuenta ha sido creada. Ahora inicia sesión.");
-            
-            // Redirigimos EXACTAMENTE a tu archivo con mayúscula
-            window.location.href = "Inicio_sesion.html"; 
-        });
-    }
-});
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var nombre = form.elements.nombre.value.trim();
+    var apellido = form.elements.apellido.value.trim();
+    var correo = form.elements.correo.value.trim().toLowerCase();
+    var clave = form.elements.clave.value;
+    var clave2 = form.elements.clave2.value;
+
+    if (!nombre || !apellido) { mostrar('Completa tu nombre y apellido.', 'error'); return; }
+    if (!RE_CORREO.test(correo)) { mostrar('Escribe un correo válido, por ejemplo nombre@dominio.com.', 'error'); form.elements.correo.focus(); return; }
+    if (clave.length < 8) { mostrar('La clave debe tener al menos 8 caracteres.', 'error'); form.elements.clave.focus(); return; }
+    if (clave !== clave2) { mostrar('Las claves no coinciden. Vuelve a intentarlo.', 'error'); form.elements.clave2.focus(); return; }
+    if (!form.elements.terminos.checked) { mostrar('Debes aceptar los términos y condiciones.', 'error'); return; }
+    if (!window.crypto || !window.crypto.subtle) { mostrar('Este navegador no permite crear la cuenta en este contexto. Abre el sitio desde https o localhost.', 'error'); return; }
+
+    var sal = aHex(window.crypto.getRandomValues(new Uint8Array(16)));
+    hashClave(clave, sal).then(function (hash) {
+      try {
+        window.localStorage.setItem(CLAVE_USUARIO, JSON.stringify({ nombre: nombre, apellido: apellido, correo: correo, sal: sal, hash: hash }));
+      } catch (e) {
+        mostrar('No se pudo guardar la cuenta: el navegador bloquea el almacenamiento local.', 'error');
+        return;
+      }
+      mostrar('¡Registro exitoso! Redirigiendo para que inicies sesión…', 'ok');
+      setTimeout(function () { window.location.href = 'Inicio_sesion.html'; }, 900);
+    }).catch(function () { mostrar('No se pudo crear la cuenta. Inténtalo de nuevo.', 'error'); });
+  });
+})();
