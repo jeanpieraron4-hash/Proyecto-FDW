@@ -179,27 +179,39 @@ body {
     cursor: pointer;
 }
 
-
-.pie-pagina {
-    background-color: #e5e5e5; 
-    padding: 30px 60px;
-    border-top: 1px solid #cccccc;
-    width: 100%;
+footer {
+    margin-top: 100px;
+    padding: 40px 50px;
+    border-top: 1px solid #ddd;
+    text-align: center;
 }
 
-.footer-logo h2 { 
-    font-size: 24px; 
-    font-weight: bold; 
-    color: #333333; 
+.logo-pie-pagina {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 3px;
     margin-bottom: 15px;
 }
 
-.footer-inferior {
-    text-align: left; 
+footer p {
+    font-size: 14px;
+    color: #666;
 }
 
-.texto-copyright { 
-    font-size: 12px; 
-    color: #111111; 
-    line-height: 1.5;
+.enlaces-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.enlaces-footer a {
+    color: #555;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.enlaces-footer a:hover {
+    text-decoration: underline;
 }
