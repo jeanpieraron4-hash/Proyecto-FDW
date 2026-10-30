@@ -3,41 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novedades</title>
+    <title>GLOX3R - Novedades</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../css/novedades.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <script defer src="../js/catalogo.js"></script>
+    <script defer src="../js/app.js"></script>
 </head>
 <body>
 
      <header class="navbar">
-        <div class="menu-icon">☰</div>
-        <div class="logo">
-            <a href="../index.html">GLOX3R</a>
-        </div>
+    <button type="button" class="menu-icon" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="menu-principal">☰</button>
+    <div class="logo">
+        <a href="../index.html">GLOX3R</a>
+    </div>
 
-    <nav class="categorias">
+    <nav class="categorias" id="menu-principal" aria-label="Navegación principal">
         <ul>
-            <li><a href="../html/catalogo_hombre.html">Hombre</a></li>
-            <li><a href="../html/catalogo_mujer.html">Mujer</a></li>
-            <li><a href="../html/accesorios.html">Accesorios</a></li>
-            <li><a href="../html/novedades.html">Novedades</a></li>
-            <li><a href="../html/contacto.html">Contacto</a></li>
+            <li><a href="catalogo_hombre.html">Hombre</a></li>
+            <li><a href="catalogo_mujer.html">Mujer</a></li>
+            <li><a href="accesorios.html">Accesorios</a></li>
+            <li><a href="novedades.html">Novedades</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
         </ul>
     </nav>
 
     <div class="acciones">
-        <form>
-           <input type="text" placeholder="Buscar en GLOX3R">
+        <form role="search">
+            <input type="search" name="q" aria-label="Buscar productos" placeholder="Buscar en GLOX3R" autocomplete="off">
         </form>
-
-        <a href="../html/carrito_1.html" class="icono"> 
-            <i class='bx bx-shopping-bag'></i> 
+        <a href="carrito_1.html" class="icono" aria-label="Ver carrito de compras">
+            <i class='bx bx-shopping-bag'></i>
         </a>
-        <a href="../html/Inicio_sesion.html" class="icono"> 
-            <i class='bx bx-user'></i> 
+        <a href="Inicio_sesion.html" class="icono" aria-label="Iniciar sesión">
+            <i class='bx bx-user'></i>
         </a>
     </div>
-
 </header>
 
     <section class="Descubre-novedades">
@@ -48,7 +49,7 @@
                 <div class="imagen">
                     <img src="https://i.pinimg.com/1200x/8b/e1/3b/8be13b108be6d3af8d5c5e57bac8a38c.jpg" alt="Polo Boxy Fit">
                 </div>
-                <p class="titulo-item">Decuentos en Jeans</p>
+                <p class="titulo-item">Descuentos en Jeans</p>
             </div>
             
             <div class="item-somos">
@@ -67,18 +68,15 @@
         </div>
     </section>
 
-<footer>
+<footer class="pie-pagina">
     <div class="logo-pie-pagina">GLOX3R</div>
     <p>©2026, GLOX3R</p>
     <div class="enlaces-footer">
-        <a href="#">Política de Privacidad</a>
-        <a href="#">Información del contacto</a>
-        <a href="#">Términos del servicio</a>
-        <a href="#">Política de reembolso</a>
-        <a href="#">Preferencias de cookies</a>
-        <a href="#">Libro de reclamaciones</a>
+      <a href="contacto.html">Información de contacto</a>
+      <a href="contacto.html">Atención al cliente</a>
+      <a href="Inicio_sesion.html">Mi cuenta</a>
+      <a href="carrito_1.html">Carrito</a>
     </div>
 </footer>
-    
 </body>
 </html>

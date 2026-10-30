@@ -5,64 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GLOX3R - Orden Confirmada</title>
     <link rel="stylesheet" href="../css/muestra_pago.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/cabecera.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <script defer src="../js/catalogo.js"></script>
+    <script defer src="../js/app.js"></script>
+    <script defer src="../js/confirmacion.js"></script>
 </head>
 <body>
-
-    <!-- BARRA DE NAVEGACIÓN -->
     <header class="navbar">
-        <div class="menu-icon">☰</div>
-        <div class="logo">GLOX3R</div>
+    <button type="button" class="menu-icon" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="menu-principal">☰</button>
+    <div class="logo">
+        <a href="../index.html">GLOX3R</a>
+    </div>
 
-        <ul class="menu">
-            <li><a href="hombre.html">Hombre</a></li>
-            <li><a href="mujer.html">Mujer</a></li>
+    <nav class="categorias" id="menu-principal" aria-label="Navegación principal">
+        <ul>
+            <li><a href="catalogo_hombre.html">Hombre</a></li>
+            <li><a href="catalogo_mujer.html">Mujer</a></li>
             <li><a href="accesorios.html">Accesorios</a></li>
             <li><a href="novedades.html">Novedades</a></li>
             <li><a href="contacto.html">Contacto</a></li>
         </ul>
+    </nav>
 
-        <div class="acciones-navbar">
-            <input type="text" placeholder="Buscar en GLOX3R">
-            <a href="carrito.html" class="icono" style="text-decoration: none;">🛒</a>
-            <span class="icono">👤</span>
-        </div>
+    <div class="acciones">
+        <form role="search">
+            <input type="search" name="q" aria-label="Buscar productos" placeholder="Buscar en GLOX3R" autocomplete="off">
+        </form>
+        <a href="carrito_1.html" class="icono" aria-label="Ver carrito de compras">
+            <i class='bx bx-shopping-bag'></i>
+        </a>
+        <a href="Inicio_sesion.html" class="icono" aria-label="Iniciar sesión">
+            <i class='bx bx-user'></i>
+        </a>
+    </div>
     </header>
-
-    <!-- SECCIÓN DE CONFIRMACIÓN -->
     <section class="seccion-confirmacion">
         <div class="caja-ticket">
 
-            <h1>ORDEN CONFIRMADA</h1>
-            <p class="numero-orden">PEDIDO #GLX-00921</p>
+            <h1 id="orden-titulo">ORDEN CONFIRMADA</h1>
+            <p class="numero-orden" id="orden-numero">PEDIDO</p>
             
             <hr class="linea-ticket">
 
-            <p class="mensaje-gracias">
+            <p class="mensaje-gracias" id="orden-mensaje">
                 Gracias por tu compra. Tu pedido está siendo procesado por nuestro equipo. 
                 Te hemos enviado un correo electrónico con el recibo y los detalles del envío.
             </p>
 
-            <div class="detalles-rapidos">
-                <p><strong>FECHA:</strong> 22 OCT 2026</p>
-                <p><strong>TOTAL PAGADO:</strong> S/145.00</p>
+            <div class="detalles-rapidos" id="orden-detalles">
+                <p><strong>FECHA:</strong> <span id="orden-fecha">—</span></p>
+                <p><strong>TOTAL PAGADO:</strong> <span id="orden-total">—</span></p>
             </div>
 
-            <a href="../html/hola2.html" class="btn-volver" style="text-align: center; box-sizing: border-box;">VOLVER A LA TIENDA</a>
+            <a href="../index.html" class="btn-volver" style="text-align: center; box-sizing: border-box;">VOLVER A LA TIENDA</a>
             
         </div>
     </section>
 
-    <!-- PIE DE PÁGINA -->
-    <footer class="pie-pagina">
-        <div class="footer-logo">
-            <h2>GLOX3R</h2>
-        </div>
-        <div class="footer-inferior">
-            <p class="texto-copyright">
-                © 2026, glox3r - Política de Privacidad - Información del contacto - Términos del servicio - Política de reembolso - Preferencias de cookies - Libro de reclamaciones
-            </p>
-        </div>
-    </footer>
+<footer class="pie-pagina">
+    <div class="logo-pie-pagina">GLOX3R</div>
+    <p>©2026, GLOX3R</p>
+    <div class="enlaces-footer">
+      <a href="contacto.html">Información de contacto</a>
+      <a href="contacto.html">Atención al cliente</a>
+      <a href="Inicio_sesion.html">Mi cuenta</a>
+      <a href="carrito_1.html">Carrito</a>
+    </div>
+</footer>
     
 </body>
 </html>

@@ -2,14 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: inherit;
 }
- 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f9f9f9;
     color: #333333;
+    display: flex;
+    flex-direction: column;
 }
- 
 .navbar {
     background-color: #1a1a1a;
     color: #ffffff;
@@ -18,18 +19,16 @@ body {
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-    position: relative;
-    z-index: 10;
-    line-height: normal;
 }
- 
+
+
 .menu-icon {
     font-size: 30px;
     cursor: pointer;
     color: #ffffff;
     display: flex;
 }
- 
+
 .logo {
     font-size: 30px;
     font-weight: bold;
@@ -37,14 +36,12 @@ body {
     cursor: pointer;
     color: #ffffff;
     margin-left: 15px; 
-    margin-right: auto;
 }
- 
 .logo a {
-    text-decoration: none;
     color: #ffffff;
+    text-decoration: none;
 }
- 
+
 .categorias {
     flex: 1;
     display: flex;
@@ -58,10 +55,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     list-style: none;
-    padding: 0;
-    margin-bottom: 0;
 }
- 
+
 .categorias a {
     color: #ffffff;
     text-decoration: none;
@@ -75,18 +70,18 @@ body {
     border-radius: 20px;
     transition: color 0.3s, background-color 0.3s;
 }
- 
+
 .categorias a:hover {
     color: #cccccc;
     background-color: rgba(255, 255, 255, 0.1);
 }
- 
+
 .acciones {
     display: flex;
     align-items: center;
     gap: 15px;
 }
- 
+
 .acciones input {
     width: 280px;
     padding: 8px 14px;
@@ -97,11 +92,11 @@ body {
     outline: none;
     font-size: 0.9rem;
 }
- 
+
 .acciones input::placeholder {
     color: #aaa;
 }
- 
+
 .icono {
     font-size: 31px;
     color: #ffffff;
@@ -112,90 +107,115 @@ body {
     display: flex;
     align-items: center;
 }
- 
+
 .icono:hover {
     color: #cccccc;
 }
- 
-.contacto {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
- 
-.contacto h1 {
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 15px;
-    color: #111;
-}
- 
-.contacto-intro {
-    text-align: center;
-    max-width: 650px;
-    margin: 0 auto 40px auto;
-    line-height: 1.5;
-    color: #555;
-    font-size: 16px;
-}
- 
-.contacto-contenido {
+
+.contenedor {
     display: flex;
-    gap: 40px;
-    align-items: flex-start;
-}
- 
-.contacto-datos {
     flex: 1;
+    min-height: calc(100vh - 85px);
+}
+
+.columna-beneficios {
+    flex: 1;
+    background-color: #f8f9fa;
+    padding: 50px 60px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    justify-content: center;
+    border-right: 1px solid #e5e7eb;
 }
- 
-.dato {
+
+.columna-beneficios .marca {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 12px;
+}
+.columna-beneficios .titulo {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+}
+
+.columna-beneficios h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #333333;
+}
+.lista-beneficios {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.lista-beneficios li {
     display: flex;
     align-items: center;
     gap: 15px;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    color: #4b5563;
 }
- 
-.dato i {
+
+.lista-beneficios li i {
     font-size: 2rem;
     color: #1a1a1a;
 }
- 
-.dato h3 {
-    font-size: 1rem;
-    margin-bottom: 4px;
-    color: #1a1a1a;
-}
- 
-.dato p {
-    font-size: 0.95rem;
-    color: #555;
-}
- 
-.contacto-formulario {
+
+.columna-formulario {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 35px;
     background-color: #ffffff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
- 
-.contacto-formulario h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+
+.formulario {
+    width: 100%;
+    max-width: 420px;
+}
+.formulario h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
     color: #1a1a1a;
 }
- 
-.campo {
+.formulario .subtitulo {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+.formulario-login .campo {
     margin-bottom: 20px;
 }
- 
+
+.campo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
 .campo label {
     display: block;
     font-size: 0.85rem;
@@ -203,82 +223,76 @@ body {
     color: #374151;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    margin-bottom: 8px;
 }
- 
-.campo input,
-.campo textarea {
-    width: 100%;
-    padding: 12px 16px;
-    border: 1px solid #d1d5db;
-    border-radius: 4px;
-    font-family: inherit;
-    font-size: 0.95rem;
+
+.clave_olvidada {
+    font-size: 0.8rem;
+    color: #4b5563;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.clave_olvidada:hover {
+    color: #1a1a1a;
+    text-decoration: underline;
+}
+
+.formulario-login input[type="email"],
+.formulario-login input[type="password"] {
+    width: 100%; 
+    padding: 12px 16px; 
+    border: 1px solid #d1d5db; 
+    border-radius: 4px; 
+    font-size: 0.95rem; 
     outline: none;
 }
- 
-.campo textarea {
-    height: 140px;
-    resize: vertical;
+.formulario-login input:focus { 
+    border-color: #1a1a1a; 
+    box-shadow: 0 0 0 2px rgba(26,26,26,0.1); 
 }
- 
-.campo input:focus,
-.campo textarea:focus {
-    border-color: #1a1a1a;
-    box-shadow: 0 0 0 2px rgba(26, 26, 26, 0.1);
+
+.checkbox-label { 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    font-size: 0.85rem; 
+    color: #4b5563; 
+    cursor: pointer; 
+    margin-bottom: 25px; 
 }
- 
-.btn-enviar {
-    width: 100%;
+
+.checkbox-label input { 
+    width: 16px; 
+    height: 16px; 
+    accent-color: #1a1a1a; 
+    cursor: pointer; 
+}
+
+.btn-iniciar {
+    width: 100%; 
+    background: #1a1a1a; 
+    color: #fff; 
+    border: none; 
     padding: 14px;
-    background-color: #1a1a1a;
-    color: #ffffff;
-    border: none;
+    font-size: 0.95rem; 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    cursor: pointer; 
     border-radius: 4px;
-    font-size: 0.95rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
- 
-.btn-enviar:hover {
-    background-color: #333333;
+.btn-iniciar:hover { 
+    background: #333; 
 }
- 
-footer {
-    margin-top: 80px;
-    padding: 40px 50px;
-    border-top: 1px solid #ddd;
-    text-align: center;
+
+.texto-registro { 
+    text-align: center; 
+    margin-top: 25px; 
+    font-size: 0.9rem; 
+    color: #777;
+    line-height: 1.6; 
 }
- 
-.logo-pie-pagina {
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    margin-bottom: 15px;
-}
- 
-footer p {
-    font-size: 14px;
-    color: #666;
-}
- 
-.enlaces-footer {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
- 
-.enlaces-footer a {
-    color: #555;
-    text-decoration: none;
-    font-size: 13px;
-}
- 
-.enlaces-footer a:hover {
-    text-decoration: underline;
+.texto-registro a { 
+    color: #1a1a1a; 
+    font-weight: 700; 
+    text-decoration: none; 
 }

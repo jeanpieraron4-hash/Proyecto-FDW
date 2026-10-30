@@ -3,136 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Accesorios y joyería de GLOX3R">
-    <title>Accesorios</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>GLOX3R - Accesorios</title>
     <link rel="stylesheet" href="../css/accesorios.css">
-
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/app.css">
+    <script defer src="../js/catalogo.js"></script>
+    <script defer src="../js/app.js"></script>
 </head>
 <body>
 
-<header class="navbar">
-    <div class="menu-icon">☰</div>
+    <header class="navbar">
+    <button type="button" class="menu-icon" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="menu-principal">☰</button>
     <div class="logo">
-        <a  class="enlace" href="../index.html">GLOX3R</a>
+        <a href="../index.html">GLOX3R</a>
     </div>
 
-    <nav class="categorias">
+    <nav class="categorias" id="menu-principal" aria-label="Navegación principal">
         <ul>
-            <li><a href="../html/catalogo_hombre.html">Hombre</a></li>
-            <li><a href="../html/catalogo_mujer.html">Mujer</a></li>
-            <li><a href="../html/accesorios.html">Accesorios</a></li>
-            <li><a href="../html/novedades.html">Novedades</a></li>
-            <li><a href="../html/contacto.html">Contacto</a></li>
+            <li><a href="catalogo_hombre.html">Hombre</a></li>
+            <li><a href="catalogo_mujer.html">Mujer</a></li>
+            <li><a href="accesorios.html">Accesorios</a></li>
+            <li><a href="novedades.html">Novedades</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
         </ul>
     </nav>
-    
-    <div class="acciones">
-        <form>
-            <input type="text" placeholder="Buscar en GLOX3R">
-        </form>
 
-        <a href="../html/carrito_1.html" class="icono"> 
-            <i class='bx bx-shopping-bag'></i> 
+    <div class="acciones">
+        <form role="search">
+            <input type="search" name="q" aria-label="Buscar productos" placeholder="Buscar en GLOX3R" autocomplete="off">
+        </form>
+        <a href="carrito_1.html" class="icono" aria-label="Ver carrito de compras">
+            <i class='bx bx-shopping-bag'></i>
         </a>
-        <a href="../html/Inicio_sesion.html" class="icono"> 
-            <i class='bx bx-user'></i> 
+        <a href="Inicio_sesion.html" class="icono" aria-label="Iniciar sesión">
+            <i class='bx bx-user'></i>
         </a>
     </div>
 </header>
 
-<div id="demo" class="carousel slide banner-seccion-full" data-bs-ride="carousel">
+    
+    <section class="banner-principal-accesorios">
+        <div class="contenido-banner">
+            <h1>ACCESORIOS SECTION</h1>
+            <p>Fresh Finds</p>
+        </div>
+    </section>
 
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-  </div>
-  
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="../image/catolo_mujer1.avif" alt="Mens Section 1" class="d-block" style="width:100%">
-    </div>
-    <div class="carousel-item">
-      <img src="../image/catologo_mujer2.avif" alt="Mens Section 2" class="d-block" style="width:100%">
-    </div>
-    <div class="carousel-item">
-      <img src="../image/catalogo_mujer3.avif" alt="Mens Section 3" class="d-block" style="width:100%">
-    </div>
-  </div>
-
-  <h1 class="titulo-banner">Collection Section</h1>
-
-  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-</div>
-
-    <section class="seccion-productos">
+    
+    <section class="seccion-productos fondo-gris">
         <div class="grid-accesorios">
+
+           
             <div class="imagen-esquina">
                 <img src="https://i.pinimg.com/736x/c7/af/64/c7af6423075f776b516bba3289be31a7.jpg" alt="Modelo Accesorios GLOX3R">
             </div>
 
-                
-            <div class="escalera-productos">
-
-                <div class="tarjeta-producto escalon-1">
-                    <img src="https://i.pinimg.com/736x/ea/79/9e/ea799e01ddb73426fb2fd23b89b3a141.jpg" alt="Gorro Tennis Club" class="imagen-producto">
-                    <div class="informacion-producto">
-                        <h3 class="nombre-producto">Tennis Club tee</h3>
-                        <span class="precio-producto">S/40.00</span>
-                        <button type="button" class="boton-carrito">Agregar al carrito</button>                        
-                    </div>
-                </div>
-
-                    
-                <div class="tarjeta-producto escalon-2">
-                    <img src="https://i.pinimg.com/1200x/eb/a5/05/eba5053fd19c36e64a8a04ac3a3dde6b.jpg" alt="Collar Velvet Riot" class="imagen-producto">
-                    <div class="informacion-producto">
-                        <h3 class="nombre-producto">Velvet Riot</h3>
-                        <span class="precio-producto">S/40.00</span>
-                        <button type="button" class="boton-carrito">Agregar al carrito</button>                    
-                    </div>                
-                </div>
-
             
-                <div class="tarjeta-producto escalon-3">
-                    <img src="https://i.pinimg.com/1200x/56/41/38/564138c45141016f44eba30718ccf2fd.jpg" alt="Correa Midnight Bloom" class="imagen-producto">
-                    <div class="informacion-producto">
-                    <h3 class="nombre-producto">Midnight Bloom</h3>
-                    <span class="precio-producto">S/40.00</span>
-                    <button  type="button" class="boton-carrito">Agregar al carrito</button>                    
+            <div class="escalera-productos">
+                
+               
+                <div class="tarjeta-producto escalon-1">
+                    <div class="imagen-placeholder">
+                        <img src="https://i.pinimg.com/736x/ea/79/9e/ea799e01ddb73426fb2fd23b89b3a141.jpg" alt="Gorro Tennis Club">
                     </div>
+                    <h3>Tennis Club tee</h3>
+                    <p class="precio">S/40.00</p>
+                    <button type="button" class="boton-carrito" data-agregar="tennis-club-tee" aria-label="Agregar Tennis Club tee al carrito">Agregar al carrito</button>
                 </div>
 
-                <div class="tarjeta-producto escalon-4">
-                    <img src="https://i.pinimg.com/736x/71/a4/1f/71a41f9ece0428196833a200423f508e.jpg" alt="Anillo Neon" class="imagen-producto">
-                    <div class="informacion-producto">
-                    <h3 class="nombre-producto">Neon</h3>
-                    <span class="precio-producto">S/40.00</span>
-                    <button  type="button" class="boton-carrito">Agregar al carrito</button>                    
+                
+                <div class="tarjeta-producto escalon-2">
+                    <div class="imagen-placeholder">
+                        <img src="https://i.pinimg.com/1200x/eb/a5/05/eba5053fd19c36e64a8a04ac3a3dde6b.jpg" alt="Collar Velvet Riot">
                     </div>
+                    <h3>Velvet Riot</h3>
+                    <p class="precio">S/40.00</p>
+                    <button type="button" class="boton-carrito" data-agregar="velvet-riot" aria-label="Agregar Velvet Riot al carrito">Agregar al carrito</button>
+                </div>
+
+         
+                <div class="tarjeta-producto escalon-3">
+                    <div class="imagen-placeholder">
+                        <img src="https://i.pinimg.com/1200x/56/41/38/564138c45141016f44eba30718ccf2fd.jpg" alt="Correa Midnight Bloom">
+                    </div>
+                    <h3>Midnight Bloom</h3>
+                    <p class="precio">S/40.00</p>
+                    <button type="button" class="boton-carrito" data-agregar="midnight-bloom" aria-label="Agregar Midnight Bloom al carrito">Agregar al carrito</button>
+                </div>
+                <div class="tarjeta-producto escalon-4">
+                    <div class="imagen-placeholder">
+                        <img src="https://i.pinimg.com/736x/71/a4/1f/71a41f9ece0428196833a200423f508e.jpg" alt="Anillo Neon">
+                    </div>
+                    <h3>Neon</h3>
+                    <p class="precio">S/40.00</p>
+                    <button type="button" class="boton-carrito" data-agregar="neon" aria-label="Agregar Neon al carrito">Agregar al carrito</button>
                 </div>
             </div>
         </div>
     </section>
-
 <footer>
     <div class="logo-pie-pagina">GLOX3R</div>
     <p>©2026, GLOX3R</p>
     <div class="enlaces-footer">
-        <a href="#">Política de Privacidad</a>
-        <a href="#">Información del contacto</a>
-        <a href="#">Términos del servicio</a>
-        <a href="#">Política de reembolso</a>
-        <a href="#">Preferencias de cookies</a>
-        <a href="#">Libro de reclamaciones</a>
+      <a href="contacto.html">Información de contacto</a>
+      <a href="contacto.html">Atención al cliente</a>
+      <a href="Inicio_sesion.html">Mi cuenta</a>
+      <a href="carrito_1.html">Carrito</a>
     </div>
 </footer>
 
