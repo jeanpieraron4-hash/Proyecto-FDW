@@ -13,63 +13,6 @@ body {
     min-height: 100vh;
 }
 
-
-.navbar {
-    background-color: #111111;
-    color: #ffffff;
-    padding: 15px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.menu-icon { font-size: 20px; 
-    cursor: pointer; 
-    display: none; 
-}
-
-.logo { font-size: 24px; 
-    font-weight: bold; 
-    letter-spacing: 2px; 
-    color: #ffffff; 
-}
-.menu { 
-    list-style: none; 
-}
-
-.menu li { 
-    display: inline-block; 
-    margin: 0 12px; 
-}
-
-.menu li a { 
-    color: #ffffff; 
-    text-decoration: none; 
-    font-size: 14px;
-}
-
-.menu li a:hover { 
-    color: #aaaaaa; 
-}
-
-.acciones-navbar { display: flex; 
-    align-items: center; 
-}
-
-.acciones-navbar input { 
-    padding: 6px 10px; 
-    border-radius: 2px; 
-    border: none; 
-    font-size: 13px; 
-    outline: none;
-}
-
-.icono { 
-    font-size: 16px; 
-    margin-left: 15px; 
-    cursor: pointer; 
-}
-
 .seccion-checkout {
     flex: 1; 
     max-width: 1200px; 

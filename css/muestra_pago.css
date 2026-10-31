@@ -13,27 +13,6 @@ body {
     min-height: 100vh;
 }
 
-/* --- BARRA DE NAVEGACIÓN --- */
-.navbar {
-    background-color: #111111;
-    color: #ffffff;
-    padding: 15px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.menu-icon { font-size: 20px; cursor: pointer; display: none; }
-.logo { font-size: 24px; font-weight: bold; letter-spacing: 2px; color: #ffffff; }
-.menu { list-style: none; }
-.menu li { display: inline-block; margin: 0 12px; }
-.menu li a { color: #ffffff; text-decoration: none; font-size: 14px;}
-.menu li a:hover { color: #aaaaaa; }
-.acciones-navbar { display: flex; align-items: center; }
-.acciones-navbar input { padding: 6px 10px; border-radius: 2px; border: none; font-size: 13px; outline: none;}
-.icono { font-size: 16px; margin-left: 15px; cursor: pointer; color: #ffffff; text-decoration: none; }
-
-/* --- SECCIÓN DE CONFIRMACIÓN --- */
 .seccion-confirmacion {
     flex: 1; 
     display: flex;
@@ -42,7 +21,6 @@ body {
     padding: 60px 20px;
 }
 
-/* Estilo de Ticket / Recibo de compra */
 .caja-ticket {
     background-color: #ffffff;
     border: 1px solid #cccccc;
@@ -112,7 +90,6 @@ body {
     background-color: #333333;
 }
 
-/* --- PIE DE PÁGINA --- */
 .pie-pagina {
     background-color: #e5e5e5; 
     padding: 30px 60px;

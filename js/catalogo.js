@@ -166,8 +166,8 @@
       imagen: null
     },
     {
-      id: 'blusa-wine-&-vibe-m',
-      nombre: 'Blusa Wine & Vibe',
+      id: 'polo-wine-&-vibe-m',
+      nombre: 'Polo Wine & Vibe',
       precio: 59,
       tipo: 'ropa',
       categorias: ['mujer'],
@@ -175,8 +175,8 @@
       imagen: null
     },
     {
-      id: 'blusa-azul-grafica',
-      nombre: 'Blusa Azul Gráfica',
+      id: 'polo-azul-grafico',
+      nombre: 'Polo Azul Gráfico',
       precio: 50,
       tipo: 'ropa',
       categorias: ['mujer'],
@@ -184,8 +184,8 @@
       imagen: null
     },
     {
-      id: 'blusa-marron-estampada-m',
-      nombre: 'Blusa Marrón Estampada',
+      id: 'polo-marron-estampado-m',
+      nombre: 'Polo Marrón Estampado',
       precio: 55,
       tipo: 'ropa',
       categorias: ['mujer'],
@@ -202,8 +202,8 @@
       imagen: null
     },
     {
-      id: 'blusa-roja-basica-m',
-      nombre: 'Blusa Roja Básica',
+      id: 'polo-rojo-basico-m',
+      nombre: 'Polo Rojo Básico',
       precio: 42,
       tipo: 'ropa',
       categorias: ['mujer'],
@@ -211,8 +211,8 @@
       imagen: null
     },
     {
-      id: 'blusa-gris-urbana-m',
-      nombre: 'Blusa Gris Urbana',
+      id: 'polo-gris-urbano-m',
+      nombre: 'Polo Gris Urbano',
       precio: 49,
       tipo: 'ropa',
       categorias: ['mujer'],
@@ -220,8 +220,8 @@
       imagen: null
     },
     {
-      id: 'blusa-negra-clasica-m',
-      nombre: 'Blusa Negra Clásica',
+      id: 'polo-negro-clasico-m',
+      nombre: 'Polo Negro Clásico',
       precio: 49,
       tipo: 'ropa',
       categorias: ['mujer'],
