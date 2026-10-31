@@ -27,7 +27,7 @@
       tipo: 'ropa',
       categorias: ['hombre'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Polo Boxy Fit.jpeg'
     },
     {
       id: 'polo-oversize-h',
@@ -36,7 +36,7 @@
       tipo: 'ropa',
       categorias: ['hombre'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Polo Overzise.jpg'
     },
     {
       id: 'polo-slim-fit-h',
@@ -45,7 +45,7 @@
       tipo: 'ropa',
       categorias: ['hombre'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Polo Slim Fit.jpg'
     },
     {
       id: 'jean-baggy-h',
@@ -54,7 +54,7 @@
       tipo: 'jean',
       categorias: ['hombre'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Jean Baggy.jpg'
     },
     {
       id: 'polo-wine-&-vibe-h',
@@ -63,7 +63,7 @@
       tipo: 'ropa',
       categorias: ['hombre'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Polo Wine & Vibe.jpeg'
     },
     {
       id: 'polo-azul-grafico-h',
@@ -72,7 +72,7 @@
       tipo: 'ropa',
       categorias: ['hombre'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Polo Azul Grafico.jpeg'
     },
     {
       id: 'polo-marron-estampado-h',
@@ -81,7 +81,7 @@
       tipo: 'ropa',
       categorias: ['hombre'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Polo Marron Estampado.jpeg.jpeg'
     },
     {
       id: 'short-jean-baggy-h',
@@ -90,7 +90,7 @@
       tipo: 'jean',
       categorias: ['hombre'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Short Jean Baggy.jpeg'
     },
     {
       id: 'polo-rojo-basico-h',
@@ -99,7 +99,7 @@
       tipo: 'ropa',
       categorias: ['hombre'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Polo Rojo Básico.jpeg'
     },
     {
       id: 'polo-gris-urbano-h',
@@ -108,7 +108,7 @@
       tipo: 'ropa',
       categorias: ['hombre'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Polo Gris Urbano.jpeg'
     },
     {
       id: 'polo-negro-clasico-h',
@@ -117,7 +117,7 @@
       tipo: 'ropa',
       categorias: ['hombre'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Polo Negro Clasico.jpeg'
     },
     {
       id: 'pantalon-jogger-h',
@@ -126,7 +126,7 @@
       tipo: 'ropa',
       categorias: ['hombre'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Pantalon Jogger.jpeg'
     },
 
     {
@@ -136,7 +136,7 @@
       tipo: 'ropa',
       categorias: ['mujer'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Polo Boxy Fit Mujer.jpeg'
     },
     {
       id: 'polo-overzise-m',
@@ -145,7 +145,7 @@
       tipo: 'ropa',
       categorias: ['mujer'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Polo Oversize Mujer.png'
     },
     {
       id: 'polo-slim-fit-m',
@@ -154,7 +154,7 @@
       tipo: 'ropa',
       categorias: ['mujer'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Polo Slim Fit Mujer.jpeg'
     },
     {
       id: 'jean-baggy-vintage-m',
@@ -163,7 +163,7 @@
       tipo: 'jean',
       categorias: ['mujer'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Jean Baggy Vintage.jpg'
     },
     {
       id: 'polo-wine-&-vibe-m',
@@ -172,7 +172,7 @@
       tipo: 'ropa',
       categorias: ['mujer'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Polo Wine & Vibe Mujer.png'
     },
     {
       id: 'polo-azul-grafico',
@@ -181,7 +181,7 @@
       tipo: 'ropa',
       categorias: ['mujer'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Polo Azul Grafico Mujer.jpeg'
     },
     {
       id: 'polo-marron-estampado-m',
@@ -190,7 +190,7 @@
       tipo: 'ropa',
       categorias: ['mujer'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Polo Marron Estampado Mujer.jpeg'
     },
     {
       id: 'short-jean-baggy-m',
@@ -199,7 +199,7 @@
       tipo: 'jean',
       categorias: ['mujer'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Short Jean Baggy Mujer.jpg'
     },
     {
       id: 'polo-rojo-basico-m',
@@ -208,7 +208,7 @@
       tipo: 'ropa',
       categorias: ['mujer'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Polo Rojo Basico Mujer.jpeg'
     },
     {
       id: 'polo-gris-urbano-m',
@@ -217,7 +217,7 @@
       tipo: 'ropa',
       categorias: ['mujer'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Polo Gris Urbano Mujer.jpeg'
     },
     {
       id: 'polo-negro-clasico-m',
@@ -226,7 +226,7 @@
       tipo: 'ropa',
       categorias: ['mujer'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Polo Negro Slim Mujer.png.png'
     },
     {
       id: 'polo-basico-m',
@@ -235,7 +235,7 @@
       tipo: 'ropa',
       categorias: ['mujer'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Polo Basico Mujer.jpeg'
     },
 
     {
@@ -245,7 +245,7 @@
       tipo: 'accesorio',
       categorias: ['accesorios'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Pulsera Aura de Plata.jpg'
     },
     {
       id: 'collar-velvet-riot',
@@ -254,7 +254,7 @@
       tipo: 'accesorio',
       categorias: ['accesorios'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Collar Velvet Riot.png'
     },
     {
       id: 'collar-jscrst',
@@ -263,7 +263,7 @@
       tipo: 'accesorio',
       categorias: ['accesorios'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Collar JSCRST.jpg'
     },
     {
       id: 'anillo-roman',
@@ -272,7 +272,7 @@
       tipo: 'accesorio',
       categorias: ['accesorios'],
       catalogos: [],
-      imagen: null
+      imagen: '../img/Anillo Roman.webp'
     }
   ];
 
