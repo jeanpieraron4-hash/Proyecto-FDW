@@ -81,7 +81,7 @@
       tipo: 'ropa',
       categorias: ['hombre'],
       catalogos: [],
-      imagen: '../img/Polo Marron Estampado.jpeg.jpeg'
+      imagen: '../img/Polo Marron Estampado.jpeg'
     },
     {
       id: 'short-jean-baggy-h',
@@ -220,13 +220,13 @@
       imagen: '../img/Polo Gris Urbano Mujer.jpeg'
     },
     {
-      id: 'polo-negro-clasico-m',
-      nombre: 'Polo Negro Clásico',
+      id: 'polo-negro-slim-m',
+      nombre: 'Polo Negro Slim',
       precio: 49,
       tipo: 'ropa',
       categorias: ['mujer'],
       catalogos: [],
-      imagen: '../img/Polo Negro Slim Mujer.png.png'
+      imagen: '../img/Polo Negro Slim Mujer.png'
     },
     {
       id: 'polo-basico-m',
