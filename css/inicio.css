@@ -196,3 +196,9 @@ body {
     font-weight: 700; 
     text-decoration: none; 
 }
+
+@media (max-width: 768px) {
+    .contenedor { flex-direction: column; }
+    .columna-beneficios,
+    .columna-formulario { width: 100%; }
+}

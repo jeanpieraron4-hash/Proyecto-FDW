@@ -165,3 +165,25 @@ footer p {
 .enlaces-footer a:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+    .banner-seccion-full {
+        height: 250px;
+    }
+
+    .banner-seccion-full .titulo-banner {
+        left: 20px;
+        font-size: 2rem;
+    }
+
+    .productos-caja {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .productos-caja {
+        grid-template-columns: 1fr;
+    }
+}

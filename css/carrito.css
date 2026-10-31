@@ -201,3 +201,9 @@ footer p {
 .enlaces-footer a:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+    .contenedor-columnas { flex-direction: column; }
+    .caja-producto,
+    .columna-resumen { width: 100%; }
+}

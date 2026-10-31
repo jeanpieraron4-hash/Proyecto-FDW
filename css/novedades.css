@@ -116,3 +116,10 @@ footer p {
 .enlaces-footer a:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 600px) {
+    .Descubre-novedades h1 { font-size: 28px; }
+    .novedades-bloque { gap: 25px; }
+    .item-somos { width: 100%; max-width: 300px; }
+    .imagen { height: 280px; }
+}

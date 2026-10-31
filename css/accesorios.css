@@ -235,3 +235,11 @@ footer p {
 .enlaces-footer a:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+    .grid-accesorios { flex-direction: column; }
+    .imagen-esquina { display: none; }
+    .escalera-productos { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
+    .escalon-1, .escalon-2, .escalon-3, .escalon-4 { grid-column: auto; grid-row: auto; }
+    .tarjeta-producto { height: auto; }
+}

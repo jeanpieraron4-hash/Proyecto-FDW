@@ -199,3 +199,13 @@ footer p {
 .enlaces-footer a:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+    #demo { height: 55vh; }
+    .grid-3 { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+    .hero-card, .product-card { height: 280px; }
+}
+
+@media (max-width: 480px) {
+    .grid-3 { grid-template-columns: 1fr; }
+}

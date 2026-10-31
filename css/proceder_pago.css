@@ -197,3 +197,10 @@ body {
     color: #111111; 
     line-height: 1.5;
 }
+
+@media (max-width: 768px) {
+    .contenedor-columnas { flex-direction: column; }
+    .columna-resumen { position: static; }
+    .fila-inputs { flex-direction: column; }
+    .bloque-formulario, .columna-resumen { padding: 20px; }
+}

@@ -219,3 +219,10 @@ body {
     font-weight: 700;
     text-decoration: none;
 }
+
+@media (max-width: 768px) {
+    .contenedor { flex-direction: column; }
+    .columna-beneficios, .columna-formulario { padding: 30px 20px; }
+    .izquierda_titulo { font-size: 2rem; }
+    .lista-beneficios li { font-size: 16px; }
+}

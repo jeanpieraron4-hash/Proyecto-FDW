@@ -366,3 +366,47 @@
 .aviso-vacio[hidden] {
     display: none;
 }
+
+@media (max-width: 1100px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .categorias ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .acciones {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .categorias {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar.menu-abierto .categorias {
+        display: block;
+    }
+
+    .categorias ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .acciones {
+        width: 100%;
+        justify-content: center;
+    }
+}
