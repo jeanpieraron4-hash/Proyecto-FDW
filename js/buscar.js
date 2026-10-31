@@ -1,4 +1,3 @@
-/* GLOX3R - Página de resultados de búsqueda (html/buscar.html?q=...). */
 (function () {
   'use strict';
   var G = window.GLOX3R;

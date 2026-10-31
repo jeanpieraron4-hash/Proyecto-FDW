@@ -1,4 +1,3 @@
-/* GLOX3R - Formulario de contacto: valida y muestra mensajes claros. No envía datos a ningún servidor. */
 (function () {
   'use strict';
   var G = window.GLOX3R;

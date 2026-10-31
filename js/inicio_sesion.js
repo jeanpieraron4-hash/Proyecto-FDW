@@ -1,16 +1,9 @@
-/*
- * GLOX3R - Inicio de sesión (demostración sin servidor).
- * Compara contra la cuenta creada en el registro (guardada en este navegador, con hash).
- * Se conserva la cuenta de acceso del profesor definida en el proyecto original.
- */
 (function () {
   'use strict';
-
   var CLAVE_USUARIO = 'glox3r_usuario';
   var CUENTA_PROFESOR = { correo: 'profesor@usmp.pe', clave: 'gloxer2026' };
   var form = document.getElementById('form-inicio');
   if (!form) return;
-
   var msg = document.getElementById('mensaje-formulario');
   function mostrar(texto, tipo) {
     msg.textContent = texto;
@@ -39,7 +32,6 @@
     var correo = form.elements.correo.value.trim().toLowerCase();
     var clave = form.elements.clave.value;
     if (!correo || !clave) { mostrar('Ingresa tu correo y tu contraseña.', 'error'); return; }
-
     if (correo === CUENTA_PROFESOR.correo && clave === CUENTA_PROFESOR.clave) { entrar(); return; }
 
     var u = usuarioGuardado();

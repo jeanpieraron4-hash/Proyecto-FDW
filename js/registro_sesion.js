@@ -1,19 +1,10 @@
-/*
- * GLOX3R - Registro (demostración sin servidor).
- * La cuenta se guarda solo en este navegador (localStorage). La contraseña NO se guarda en
- * texto plano: se almacena un hash SHA-256 con sal. Esto es una demostración académica, no
- * un sistema de autenticación real.
- */
 (function () {
   'use strict';
-
   var CLAVE_USUARIO = 'glox3r_usuario';
   var form = document.getElementById('form-registro');
   if (!form) return;
-
   var msg = document.getElementById('mensaje-formulario');
   var RE_CORREO = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-
   function mostrar(texto, tipo) {
     msg.textContent = texto;
     msg.className = 'mensaje-formulario ' + (tipo || '');

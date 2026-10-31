@@ -1,4 +1,3 @@
-/* GLOX3R - Confirmación: muestra el pedido guardado por el checkout. */
 (function () {
   'use strict';
   var G = window.GLOX3R;

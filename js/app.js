@@ -1,14 +1,7 @@
 
-/*
- * GLOX3R - Funcionalidades compartidas:
- * carrito, buscador, menú móvil, almacenamiento e imágenes.
- *
- * Requiere que catalogo.js se cargue antes.
- */
 (function () {
   'use strict';
 
-  // ---------- CATÁLOGO ----------
   var C = window.GLOX3R_CATALOGO;
 
   if (!C || !Array.isArray(C.PRODUCTOS)) {
@@ -21,11 +14,8 @@
   var ENVIO_EXPRESS = 2500;
   var MAX_CANTIDAD = 99;
 
-  // Obtener la raíz del proyecto desde la ubicación de app.js.
   var scriptActual = document.currentScript;
   var RAIZ = new URL('../', scriptActual.src).href;
-
-  // Crear un índice para localizar productos mediante su ID.
   var porId = {};
 
   C.PRODUCTOS.forEach(function (p) {
@@ -38,7 +28,6 @@
     porId[p.id] = p;
   });
 
-  // ---------- ALMACENAMIENTO ----------
   var memoria = {};
 
   function leer(clave, defecto) {
@@ -76,11 +65,9 @@
     try {
       window.localStorage.removeItem(clave);
     } catch (error) {
-      // El almacenamiento puede estar bloqueado.
     }
   }
 
-  // ---------- UTILIDADES ----------
   function centimos(precio) {
     return Math.round(Number(precio) * 100);
   }
@@ -111,21 +98,11 @@
     return elemento;
   }
 
-  // ---------- IMÁGENES ----------
-  /*
-   * Convierte las rutas locales en direcciones válidas
-   * desde cualquier página del proyecto.
-   *
-   * Ejemplo:
-   * ../img/Polo Boxy Fit.jpeg
-   * se resolverá desde la raíz del proyecto.
-   */
   function resolverRutaImagen(ruta) {
     if (!ruta) return '';
 
     ruta = String(ruta).trim();
 
-    // Mantener imágenes externas y direcciones especiales.
     if (
       /^(https?:)?\/\//i.test(ruta) ||
       /^(data|blob):/i.test(ruta)
@@ -133,7 +110,6 @@
       return ruta;
     }
 
-    // Quitar ../, ./ y barras iniciales.
     ruta = ruta
       .replace(/^(\.\.\/)+/, '')
       .replace(/^\.\/+/, '')
@@ -162,7 +138,6 @@
   }
 
   function crearImagen(p, clase) {
-    // Si no existe una imagen, mostrar un bloque alternativo.
     if (!p.imagen) {
       return crearImagenAlternativa(p, clase);
     }
@@ -174,7 +149,6 @@
 
     img.src = resolverRutaImagen(p.imagen);
 
-    // Si la ruta es incorrecta, mostrar una alternativa.
     img.addEventListener('error', function () {
       if (img.parentNode) {
         img.parentNode.replaceChild(
@@ -187,7 +161,6 @@
     return img;
   }
 
-  // ---------- CARRITO ----------
   function cargarCarrito() {
     var guardado = leer(CLAVE_CARRITO, []);
 
@@ -215,29 +188,23 @@
       if (!(cantidad >= 1)) {
         cantidad = 1;
       }
-
       cantidad = Math.min(MAX_CANTIDAD, cantidad);
-
       var tallas = C.TALLAS[producto.tipo] || [];
       var tallaDefecto =
         C.TALLA_DEFECTO[producto.tipo] || tallas[0] || '';
-
       var talla = tallas.indexOf(linea.talla) >= 0
         ? linea.talla
         : tallaDefecto;
-
       lineas.push({
         id: linea.id,
         cantidad: cantidad,
         talla: talla
       });
     });
-
     return lineas;
   }
 
   var lineas = cargarCarrito();
-
   function buscarLinea(id) {
     return lineas.find(function (linea) {
       return linea.id === id;
@@ -246,13 +213,10 @@
 
   function persistir() {
     var guardado = guardar(CLAVE_CARRITO, lineas);
-
     document.dispatchEvent(
       new CustomEvent('glox3r:carrito')
     );
-
     actualizarInsignia();
-
     return guardado;
   }
 
@@ -277,13 +241,10 @@
 
     agregar: function (id) {
       var producto = porId[id];
-
       if (!producto) {
         return false;
       }
-
       var linea = buscarLinea(id);
-
       if (linea) {
         linea.cantidad = Math.min(
           MAX_CANTIDAD,
@@ -294,7 +255,6 @@
         var tallas = C.TALLAS[producto.tipo] || [];
         var talla = C.TALLA_DEFECTO[producto.tipo] ||
           tallas[0] || '';
-
         lineas.push({
           id: id,
           cantidad: 1,
@@ -307,11 +267,8 @@
 
     cambiarCantidad: function (id, cantidad) {
       var linea = buscarLinea(id);
-
       if (!linea) return;
-
       cantidad = parseInt(cantidad, 10);
-
       if (!(cantidad >= 1)) {
         cantidad = 1;
       }
@@ -326,9 +283,7 @@
 
     cambiarTalla: function (id, talla) {
       var linea = buscarLinea(id);
-
       if (!linea) return;
-
       var producto = porId[id];
       var tallas = C.TALLAS[producto.tipo] || [];
 
@@ -354,7 +309,6 @@
     totales: function (envio) {
       var subtotal = lineas.reduce(function (total, linea) {
         var producto = porId[linea.id];
-
         return total +
           centimos(producto.precio) * linea.cantidad;
       }, 0);
@@ -371,49 +325,38 @@
     }
   };
 
-  // Sincronizar el carrito entre pestañas.
   window.addEventListener('storage', function (evento) {
     if (evento.key === CLAVE_CARRITO) {
       lineas = cargarCarrito();
-
       actualizarInsignia();
-
       document.dispatchEvent(
         new CustomEvent('glox3r:carrito')
       );
     }
   });
 
-  // ---------- AVISOS ----------
   var temporizadorAviso = null;
 
   function aviso(texto) {
     var toast = document.getElementById('aviso-glox3r');
-
     if (!toast) {
       toast = el('div', 'aviso-glox3r');
       toast.id = 'aviso-glox3r';
-
       toast.setAttribute('role', 'status');
       toast.setAttribute('aria-live', 'polite');
-
       document.body.appendChild(toast);
     }
 
     toast.textContent = texto;
     toast.classList.add('visible');
-
     clearTimeout(temporizadorAviso);
-
     temporizadorAviso = setTimeout(function () {
       toast.classList.remove('visible');
     }, 2400);
   }
 
-  // ---------- CONTADOR DEL CARRITO ----------
   function actualizarInsignia() {
     var cantidad = carrito.cantidadTotal();
-
     var enlaces = document.querySelectorAll(
       '.navbar a.icono[href$="carrito_1.html"]'
     );
@@ -425,7 +368,6 @@
 
       if (!insignia) {
         insignia = el('span', 'insignia-carrito');
-
         insignia.setAttribute(
           'aria-hidden',
           'true'
@@ -433,12 +375,9 @@
 
         enlace.appendChild(insignia);
       }
-
       insignia.textContent =
         cantidad > 99 ? '99+' : String(cantidad);
-
       insignia.hidden = cantidad === 0;
-
       enlace.setAttribute(
         'aria-label',
         cantidad
@@ -449,12 +388,10 @@
     });
   }
 
-  // ---------- BUSCADOR ----------
   function buscar(consulta) {
     var terminos = normalizar(consulta)
       .split(/\s+/)
       .filter(Boolean);
-
     if (!terminos.length) {
       return [];
     }
@@ -465,7 +402,6 @@
           return C.ETIQUETAS[categoria] || categoria;
         })
         .join(' ');
-
       var texto = normalizar(
         producto.nombre + ' ' + categorias
       );
@@ -482,10 +418,8 @@
     );
 
     Array.prototype.forEach.call(formularios, function (formulario) {
-
       formulario.addEventListener('submit', function (evento) {
         evento.preventDefault();
-
         var input = formulario.querySelector(
           'input[name="q"]'
         );
@@ -493,7 +427,6 @@
         var consulta = input
           ? input.value.trim()
           : '';
-
         if (!consulta) {
           if (input) input.focus();
           return;
@@ -507,10 +440,8 @@
     });
   }
 
-  // ---------- MENÚ MÓVIL ----------
   function iniciarMenu() {
     var barra = document.querySelector('.navbar');
-
     var boton = document.querySelector(
       '.navbar .menu-icon'
     );
@@ -521,7 +452,6 @@
 
     function alternar(abrir) {
       barra.classList.toggle('menu-abierto', abrir);
-
       boton.setAttribute(
         'aria-expanded',
         abrir ? 'true' : 'false'
@@ -558,10 +488,8 @@
     });
   }
 
-  // ---------- TARJETAS PARA RESULTADOS DE BÚSQUEDA ----------
   function crearTarjeta(producto, mostrarCategorias) {
     var tarjeta = el('div', 'producto-carta');
-
     tarjeta.appendChild(
       crearImagen(producto, 'imagen-producto')
     );
@@ -581,7 +509,6 @@
           return C.ETIQUETAS[categoria] || categoria;
         })
         .join(' · ');
-
       informacion.appendChild(
         el('span', 'etiqueta-categoria', etiquetas)
       );
@@ -619,13 +546,6 @@
     return tarjeta;
   }
 
-  /*
-   * Solo genera tarjetas cuando existe expresamente
-   * un contenedor con data-catalogo.
-   *
-   * Tus catálogos actuales están escritos directamente
-   * en HTML y no serán reemplazados por esta función.
-   */
   function dibujarCatalogos() {
     var contenedores = document.querySelectorAll(
       '[data-catalogo]'
@@ -644,7 +564,6 @@
       });
 
       contenedor.textContent = '';
-
       if (!productos.length) {
         contenedor.appendChild(
           el(
@@ -665,30 +584,20 @@
     });
   }
 
-  // ---------- BOTONES AGREGAR AL CARRITO ----------
-  /*
-   * Se utiliza delegación de eventos:
-   * cualquier botón con data-agregar funcionará,
-   * incluso si aparece posteriormente en el documento.
-   */
   document.addEventListener('click', function (evento) {
     var objetivo = evento.target;
-
     if (objetivo.nodeType !== 1) {
       objetivo = objetivo.parentElement;
     }
 
     if (!objetivo) return;
-
     var boton = objetivo.closest('[data-agregar]');
-
     if (!boton || boton.disabled) {
       return;
     }
 
     var id = boton.getAttribute('data-agregar');
     var producto = porId[id];
-
     if (!producto) {
       console.error(
         'GLOX3R: producto no encontrado:',
@@ -696,12 +605,10 @@
       );
 
       aviso('Este producto no está disponible.');
-
       return;
     }
 
     var guardado = carrito.agregar(id);
-
     if (guardado) {
       aviso(
         producto.nombre + ' se agregó al carrito'
@@ -713,19 +620,14 @@
       );
     }
   });
-
-  // ---------- VALIDACIÓN DE FORMULARIOS ----------
+  
   function errorCampo(input, mensaje) {
     var idError = (input.id || input.name) + '-error';
-
     var error = document.getElementById(idError);
-
     if (!error) {
       error = el('span', 'error-campo');
       error.id = idError;
-
       var ancla = input.closest('.fila-inputs') || input;
-
       while (
         ancla.nextElementSibling &&
         ancla.nextElementSibling.classList.contains('error-campo')
@@ -737,11 +639,9 @@
     }
 
     error.textContent = mensaje || '';
-
     if (mensaje) {
       input.setAttribute('aria-invalid', 'true');
       input.setAttribute('aria-describedby', idError);
-
     } else {
       input.removeAttribute('aria-invalid');
       input.removeAttribute('aria-describedby');
@@ -753,11 +653,6 @@
   var RE_CORREO = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
   var RE_NOMBRE = /^[\p{L}][\p{L}\s'.-]*$/u;
 
-  // ---------- API PÚBLICA ----------
-  /*
-   * Otros archivos utilizan estas funciones.
-   * Por eso mantenemos sus nombres y estructura.
-   */
   window.GLOX3R = {
     RAIZ: RAIZ,
     C: C,
@@ -787,7 +682,6 @@
     RE_NOMBRE: RE_NOMBRE
   };
 
-  // ---------- INICIALIZACIÓN ----------
   function iniciarAplicacion() {
     iniciarMenu();
     iniciarBuscador();
