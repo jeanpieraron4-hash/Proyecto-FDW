@@ -34,14 +34,6 @@
     mostrar('Correo o contraseña incorrectos. Verifica tus datos o regístrate.', 'error');
   }
 
-  var recuperar = document.getElementById('enlace-recuperar');
-  if (recuperar) {
-    recuperar.addEventListener('click', function (ev) {
-      ev.preventDefault();
-      mostrar('La recuperación de contraseña aún no está disponible en esta versión.', 'info');
-    });
-  }
-
   form.addEventListener('submit', function (ev) {
     ev.preventDefault();
     var correo = form.elements.correo.value.trim().toLowerCase();

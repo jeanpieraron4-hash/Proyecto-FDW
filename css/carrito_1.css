@@ -124,6 +124,13 @@ body {
     text-align: center;
     border: 1px solid #cccccc;
     font-size: 16px;
+    appearance: textfield;
+}
+
+.controles-producto .cantidad::-webkit-inner-spin-button,
+.controles-producto .cantidad::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .controles-producto .btn-eliminar {
